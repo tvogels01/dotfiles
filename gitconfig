@@ -1,0 +1,17 @@
+[alias]
+	s = status
+	b = branch
+	co = checkout
+	ci = commit --all
+	l = log --oneline --decorate --max-count=20
+	g = log --oneline --decorate --max-count=20 --graph
+	d = diff --ignore-space-change --ignore-blank-lines --ignore-space-at-eol
+	praise = blame -w
+[color]
+	ui = true
+[push]
+	default = simple
+[rebase]
+	autosquash = true
+[remote "origin"]
+	prune = true
