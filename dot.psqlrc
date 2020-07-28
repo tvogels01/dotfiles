@@ -1,0 +1,7 @@
+-- target: ~/.psqlrc
+
+\pset null ⟲
+\x auto
+
+-- \set ECHO_HIDDEN on
+-- \set FETCH_COUNT 100
