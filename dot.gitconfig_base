@@ -1,14 +1,19 @@
+# target: ~/.gitconfig_base
+# usage: 
+# [include]
+#    path = ~/.gitconfig_base
+
 [alias]
 	a = add --update --verbose
-	s = status
 	b = branch
-	co = checkout
 	ci = commit --all
-	l = log --oneline --decorate --max-count=20
-	g = log --oneline --decorate --max-count=20 --graph
+	co = checkout
 	d = diff --ignore-space-change --ignore-blank-lines --ignore-space-at-eol
 	ds = diff --staged --ignore-space-change --ignore-blank-lines --ignore-space-at-eol
+	g = log --oneline --decorate --max-count=20 --graph
+	l = log --oneline --decorate --max-count=20
 	praise = blame -w
+	s = status
 [color]
 	ui = true
 [push]

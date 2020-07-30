@@ -1,6 +1,27 @@
 # Usage: "brew bundle"
 
-gti
-jq
-jsonpp
-sl
+brew "aws-shell"
+brew "awscli"
+brew "black"
+brew "checkbashisms"
+brew "clisp"
+brew "clojure"
+brew "dos2unix"
+brew "git"
+brew "gti"
+brew "htop"
+brew "jq"
+brew "jsonpp"
+brew "leiningen"
+brew "node@12"
+brew "openjdk@11"
+brew "parquet-tools"
+brew "postgresql@11"
+brew "python"
+brew "readline"
+brew "sl"
+brew "sqlite"
+# brew "terraform"
+brew "terragrunt"
+brew "wget"
+brew "yarn"
