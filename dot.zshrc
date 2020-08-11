@@ -16,7 +16,7 @@ export PATH="/usr/local/opt/terraform/bin:$PATH"
 alias ll='ls -alF'
 alias mv='mv -i'
 alias rm='rm -i'
-alias ..='\cd ..'
+# alias ..='\cd ..'
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -30,6 +30,9 @@ zstyle :compinstall filename '/Users/thomasvogels/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+export EDITOR=vim
+export GREP_COLOR="auto"
 
 # source /opt/intel/mkl/bin/mklvars.sh intel64 ilp64
 # source /opt/intel/mkl/bin/mklvars.sh

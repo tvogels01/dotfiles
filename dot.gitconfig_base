@@ -1,5 +1,5 @@
 # target: ~/.gitconfig_base
-# usage: 
+# append to ~/.gitconfig: 
 # [include]
 #    path = ~/.gitconfig_base
 
@@ -16,6 +16,8 @@
 	s = status
 [color]
 	ui = true
+[pull]
+	ff = only
 [push]
 	default = simple
 [rebase]

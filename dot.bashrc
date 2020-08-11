@@ -12,8 +12,6 @@ alias h='history'
 
 alias od='/Applications/Xcode.app/Contents//Developer/usr/bin/opendiff'
 
-export SBT_OPTS="-XX:+CMSClassUnloadingEnabled"
-
 export GREP_COLOR="auto"
 
 if [ type __git_ps1 > /dev/null 2>&1 ]; then

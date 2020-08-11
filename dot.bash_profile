@@ -1,6 +1,3 @@
-# Auto export all variables and functions
-set -a
-
 # Update brewed path
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
@@ -13,8 +10,6 @@ done
 source ~/.bashrc
 
 # Python
-WORKON_HOME=~/Envs
-VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+export WORKON_HOME=~/Envs
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper_lazy.sh
-
-set +a
