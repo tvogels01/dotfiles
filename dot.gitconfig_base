@@ -1,10 +1,12 @@
 # target: ~/.gitconfig_base
-# append to ~/.gitconfig: 
+
+# Append these two lines to ~/.gitconfig:
 # [include]
 #    path = ~/.gitconfig_base
 
 [alias]
 	a = add --update --verbose
+	amend = commit --amend
 	b = branch
 	ci = commit --all
 	co = checkout
@@ -16,6 +18,8 @@
 	s = status
 [color]
 	ui = true
+[init]
+	defaultBranch = main
 [pull]
 	ff = only
 [push]

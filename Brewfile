@@ -1,4 +1,12 @@
 # Usage: "brew bundle"
+#
+# 1. Install XCode command line utilities:
+#     xcode-select --install
+# 2. Install Homebrew:
+#     see https://brew.sh
+# 3. Install packagees
+#     brew bundle
+
 
 brew "aws-shell"
 brew "awscli"
@@ -21,7 +29,8 @@ brew "python"
 brew "readline"
 brew "sl"
 brew "sqlite"
-# brew "terraform"
-brew "terragrunt"
 brew "wget"
 brew "yarn"
+
+tap "aws/tap"
+brew "aws-sam-cli"

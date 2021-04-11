@@ -1,3 +1,5 @@
+# target: ~/.bash_profile
+
 # Update brewed path
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
@@ -6,10 +8,15 @@ for f in /usr/local/etc/bash_completion.d/*; do
   source $f
 done
 
+# Command Aliases
+if [ -r ~/.aliases ]; then
+  source ~/.aliases
+fi
+
+# HOMEBREW_GITHUB_API_TOKEN
+if [ -r ~/.private/keys ]; then
+  source ~/.private/keys
+fi
+
 # Basic Bash
 source ~/.bashrc
-
-# Python
-export WORKON_HOME=~/Envs
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-source /usr/local/bin/virtualenvwrapper_lazy.sh

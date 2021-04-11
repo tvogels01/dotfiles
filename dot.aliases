@@ -1,1 +1,10 @@
 # target: ~/.aliases
+
+alias la='ls -A'
+alias ll='ls -alF'
+alias cp='cp -i'
+alias mv='mv -i'
+alias rm='rm -i'
+alias h='history'
+
+alias od='/Applications/Xcode.app/Contents//Developer/usr/bin/opendiff'
