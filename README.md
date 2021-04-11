@@ -8,18 +8,17 @@ These are the configuration files that I'm using on my computers.
 
 ### Additional Software on macOS
 
-See [Brewfile][./Brewfile] to install basic software.
+See [Brewfile](./Brewfile) to install basic software.
 
 ### Git
 
 Git configuration:
 ```shell
-git config --global user.name ""
-git config --global user.email ""
-git config --global init.defaultBranch main
+git config --global user.name "My Name Here"
+git config --global user.email "my_email@example.com"
 ```
 
-See also [dot.gitconfig\_base][./dot.gitconfig_base].
+See also [dot.gitconfig\_base](./dot.gitconfig_base).
 
 ### "Installation"
 
