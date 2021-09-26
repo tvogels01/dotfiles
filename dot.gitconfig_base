@@ -7,7 +7,7 @@
 [alias]
 	a = add --update --verbose
 	amend = commit --amend
-	b = branch
+	b = branch -vv
 	ci = commit --all
 	co = checkout
 	d = diff --ignore-space-change --ignore-blank-lines --ignore-space-at-eol
@@ -15,7 +15,7 @@
 	g = log --oneline --decorate --max-count=20 --graph
 	l = log --oneline --decorate --max-count=20
 	praise = blame -w
-	s = status
+	s = status --short --branch
 [color]
 	ui = true
 [init]

@@ -1,10 +1,14 @@
 # target: ~/.aliases
 
+# TODO(tom): Use also -G?
 alias la='ls -A'
 alias ll='ls -alF'
+
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='rm -i'
-alias h='history'
 
-alias od='/Applications/Xcode.app/Contents//Developer/usr/bin/opendiff'
+alias h='history'
+alias up='cd ..'
+
+alias od='/Applications/Xcode.app/Contents/Developer/usr/bin/opendiff'

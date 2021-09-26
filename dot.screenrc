@@ -1,5 +1,13 @@
 # target: ~/.screenrc
 
-defscrollback 5000
-termcapinfo xterm* ti@:te@
+# Use ^j instead of ^a to control screen
+escape ^jJ
+
+# Skip copyright message
 startup_message off
+
+# Increase scrollback buffer
+defscrollback 10000
+
+# Update terminal's termcap
+termcapinfo xterm* ti@:te@
