@@ -1,3 +1,5 @@
+# target: ~/.gitignore_global
+
 # From https://help.github.com/articles/ignoring-files
 # git config --global core.excludesfile ~/.gitignore_global
 
@@ -43,3 +45,4 @@ Thumbs.db
 # Backup files #
 ################
 *~
+*.swp

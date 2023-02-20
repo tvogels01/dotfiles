@@ -13,7 +13,7 @@ if [ -r ~/.aliases ]; then
   source ~/.aliases
 fi
 
-# HOMEBREW_GITHUB_API_TOKEN
+# E.g. for HOMEBREW_GITHUB_API_TOKEN
 if [ -r ~/.private/keys ]; then
   source ~/.private/keys
 fi

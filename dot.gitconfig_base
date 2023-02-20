@@ -18,6 +18,8 @@
 	s = status --short --branch
 [color]
 	ui = true
+[core]
+	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
 [pull]

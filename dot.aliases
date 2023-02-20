@@ -1,7 +1,6 @@
 # target: ~/.aliases
 
-# TODO(tom): Use also -G?
-alias la='ls -A'
+alias la='ls -AG'
 alias ll='ls -alF'
 
 alias cp='cp -i'

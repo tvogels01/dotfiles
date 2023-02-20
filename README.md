@@ -22,16 +22,18 @@ See also [dot.gitconfig\_base](./dot.gitconfig_base).
 
 ### "Installation"
 
-Until I whip up something fancier:
+Until I whip up something fancier (assuming you organize clones in `~/repos/owner/name`):
 ```shell
-cp dot.aliases ~/.alises
-cp dot.bash_profile ~/.bash_profile
-cp dot.bashrc ~/.bashrc
-cp dot.gitconfig_base ~/.gitconfig_base
-cp dot.psqlrc ~/.psqlrc
-cp dot.screenrc ~/.screenrc
-cp dot.vimrc ~/.vimrc
-cp dot.zshrc ~/.zshrc
+ln -s ~/repos/tvogels01/dotfiles/dot.aliases          ~/.aliases
+ln -s ~/repos/tvogels01/dotfiles/dot.bash_logout      ~/.bash_logout
+ln -s ~/repos/tvogels01/dotfiles/dot.bash_profile     ~/.bash_profile
+ln -s ~/repos/tvogels01/dotfiles/dot.bashrc           ~/.bashrc
+ln -s ~/repos/tvogels01/dotfiles/dot.gitconfig_base   ~/.gitconfig_base
+ln -s ~/repos/tvogels01/dotfiles/dot.gitignore_global ~/.gitignore_global
+ln -s ~/repos/tvogels01/dotfiles/dot.psqlrc           ~/.psqlrc
+ln -s ~/repos/tvogels01/dotfiles/dot.sreenrc          ~/.sreenrc
+ln -s ~/repos/tvogels01/dotfiles/dot.vimrc            ~/.vimrc
+ln -s ~/repos/tvogels01/dotfiles/dot.zshrc            ~/.zshrc
 ```
 
 ## Renaming `master` to `main`
