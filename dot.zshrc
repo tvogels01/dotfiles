@@ -1,18 +1,25 @@
 # target: ~/.zshrc
 
-# /usr/local/share/zsh/site-functions
-
 bindkey -v
 
 # See Brewfile for specific versions
-export PATH="/usr/local/opt/postgresql@11/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@14/bin:$PATH"
 export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export PATH="/usr/local/opt/node@12/bin:$PATH"
+export PATH="/usr/local/opt/node@16/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 if [ -r ~/.aliases ]; then
   source ~/.aliases
 fi
+
+# Some scripts are broken in /usr/local/share/zsh/site-functions ?
+for f in \
+  /usr/local/share/zsh/site-functions/_aws \
+  /usr/local/share/zsh/site-functions/_gh \
+  /usr/local/share/zsh/site-functions/_lein \
+; do
+  source $f
+done
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
