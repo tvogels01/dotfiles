@@ -19,8 +19,11 @@ for f in \
   /usr/local/share/zsh/site-functions/_aws \
   /usr/local/share/zsh/site-functions/_gh \
   /usr/local/share/zsh/site-functions/_lein \
+  /opt/homebrew/share/zsh/site-functions/_aws \
+  /opt/homebrew/share/zsh/site-functions/_gh \
+  /opt/homebrew/share/zsh/site-functions/_lein \
 ; do
-  source $f
+  test -f "$f" && source "$f"
 done
 
 # Lines configured by zsh-newuser-install
@@ -49,14 +52,14 @@ export GREP_COLOR="auto"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/usr/local/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/usr/local/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
     else
-        export PATH="/usr/local/Caskroom/miniconda/base/bin:$PATH"
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
     fi
 fi
 unset __conda_setup
