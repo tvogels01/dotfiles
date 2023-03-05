@@ -2,7 +2,7 @@
 
 _Basic setup files and setup instructions_
 
-These are the configuration files that I'm using on my computers.
+These are the configuration files and settings that I'm using on my computers.
 
 ## Getting Started
 
