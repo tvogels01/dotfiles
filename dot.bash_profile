@@ -1,10 +1,10 @@
 # target: ~/.bash_profile
 
 # Update brewed path
-PATH=/usr/local/bin:/usr/local/sbin:$PATH
+PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
 
 # Completions
-for f in /usr/local/etc/bash_completion.d/*; do
+for f in /opt/homebrew/etc/bash_completion.d/*; do
   source $f
 done
 

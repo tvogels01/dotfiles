@@ -5,10 +5,12 @@
 bindkey -v
 
 # See Brewfile for specific versions
-export PATH="/usr/local/opt/postgresql@14/bin:$PATH"
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export PATH="/usr/local/opt/node@16/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
+typeset -U path
+path+="/opt/homebrew/bin"
+path+="/opt/homebrew/opt/postgresql@14/bin"
+path+="/opt/homebrew/opt/openjdk@11/bin"
+path+="/opt/homebrew/opt/node@16/bin"
+path+="/opt/homebrew/sbin"
 
 if [ -r ~/.aliases ]; then
   source ~/.aliases
@@ -16,9 +18,6 @@ fi
 
 # Some scripts are broken in /usr/local/share/zsh/site-functions ?
 for f in \
-  /usr/local/share/zsh/site-functions/_aws \
-  /usr/local/share/zsh/site-functions/_gh \
-  /usr/local/share/zsh/site-functions/_lein \
   /opt/homebrew/share/zsh/site-functions/_aws \
   /opt/homebrew/share/zsh/site-functions/_gh \
   /opt/homebrew/share/zsh/site-functions/_lein \
@@ -67,4 +66,4 @@ unset __conda_setup
 
 # Prelim:
 #    conda create --name code
-test -d /usr/local/Caskroom/miniconda/base/envs/code && conda activate code
+test -d /opt/homebrew/Caskroom/miniconda/base/envs/code && conda activate code
