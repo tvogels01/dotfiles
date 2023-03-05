@@ -37,12 +37,9 @@ ln -s ~/repos/tvogels01/dotfiles/dot.vimrc            ~/.vimrc
 ln -s ~/repos/tvogels01/dotfiles/dot.zshrc            ~/.zshrc
 ```
 
-## Renaming `master` to `main`
+## Updating
 
-Use the GitHub UI, then:
-```shell
-git branch -m master main
-git fetch origin
-git branch -u origin/main main
-git remote set-head origin -a
+```
+brew bundle
+conda update conda
 ```
