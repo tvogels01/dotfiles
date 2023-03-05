@@ -9,6 +9,7 @@
 
 
 brew "aws-shell"
+brew "aws-sam-cli"
 brew "awscli"
 brew "black"
 brew "checkbashisms"
@@ -38,6 +39,3 @@ brew "rlwrap"
 brew "sl"
 brew "sqlite"
 brew "wget"
-
-# tap "aws/tap"
-# brew "aws-sam-cli"
