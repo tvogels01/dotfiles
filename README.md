@@ -28,6 +28,7 @@ ln -s ~/repos/tvogels01/dotfiles/dot.aliases          ~/.aliases
 ln -s ~/repos/tvogels01/dotfiles/dot.bash_logout      ~/.bash_logout
 ln -s ~/repos/tvogels01/dotfiles/dot.bash_profile     ~/.bash_profile
 ln -s ~/repos/tvogels01/dotfiles/dot.bashrc           ~/.bashrc
+ln -s ~/repos/tvogels01/dotfiles/dot.condarc          ~/.condarc
 ln -s ~/repos/tvogels01/dotfiles/dot.editorconfig     ~/.editorconfig
 ln -s ~/repos/tvogels01/dotfiles/dot.gitconfig_base   ~/.gitconfig_base
 ln -s ~/repos/tvogels01/dotfiles/dot.gitignore_global ~/.gitignore_global

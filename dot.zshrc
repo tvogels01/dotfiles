@@ -61,3 +61,7 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+# Prelim:
+#    conda create --name code
+test -d /usr/local/Caskroom/miniconda/base/envs/code && conda activate code
