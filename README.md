@@ -10,6 +10,18 @@ These are the configuration files and settings that I'm using on my computers.
 
 See [Brewfile](./Brewfile) to install basic software.
 
+```shell
+brew bundle
+```
+
+### Conda
+
+```shell
+brew install conda
+conda update conda
+conda create -n code
+```
+
 ### Git
 
 Git configuration:
@@ -22,7 +34,7 @@ See also [dot.gitconfig\_base](./dot.gitconfig_base).
 
 ### "Installation"
 
-Until I whip up something fancier (assuming you organize clones in `~/repos/owner/name`):
+Until I whip up something fancier (assuming you organize your clones in `~/repos/owner/name`):
 ```shell
 ln -s ~/repos/tvogels01/dotfiles/dot.aliases          ~/.aliases
 ln -s ~/repos/tvogels01/dotfiles/dot.bash_logout      ~/.bash_logout
@@ -43,6 +55,7 @@ ln -s ~/repos/tvogels01/dotfiles/dot.zshrc            ~/.zshrc
 
 ## Visual Studio Code extensions
 
+Search in their market place:
 ```shell
 jq -r < ~/.vscode/extensions/extensions.json '.[].relativeLocation'  | sort
 ```
