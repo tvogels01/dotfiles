@@ -14,6 +14,11 @@ export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
 
+# Smarter "cd"
+setopt auto_cd
+cdpath=(~/repos/*)
+
+# Aliases shared across shells
 if [ -r ~/.aliases ]; then
   source ~/.aliases
 fi
@@ -41,16 +46,19 @@ compinit
 # End of lines added by compinstall
 
 # Begin of vcs_info: Adding version control info to prompt
+setopt prompt_subst
+setopt prompt_percent
+
 autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' check-for-changes true
 # Default: " (%s)-[%b]%u%c-"
-zstyle ':vcs_info:git:*' formats '%s:%b %u%c'
+zstyle ':vcs_info:git:*' formats '[%F{green}%b%f %F{red}%u%c%f]'
 # Default: " (%s)-[%b|%a]%u%c-"
-zstyle ':vcs_info:git:*' actionformats '%s-%a:%b %u%c'
+zstyle ':vcs_info:git:*' actionformats '[%s-%a %F{green}%b%f %F{red}%u%c%f]'
 
-setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
+ZLE_RPROMPT_INDENT=1
 # End of vcsinfo
 
 # Prelim:
