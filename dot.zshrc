@@ -3,14 +3,16 @@
 # dotfile target: ~/.zshrc
 
 bindkey -v
+set -o vi
+export EDITOR=vim
+export GREP_COLOR="auto"
 
 # See Brewfile for specific versions
 typeset -U path
-path+="/opt/homebrew/bin"
-path+="/opt/homebrew/opt/postgresql@14/bin"
-path+="/opt/homebrew/opt/openjdk@11/bin"
-path+="/opt/homebrew/opt/node@16/bin"
-path+="/opt/homebrew/sbin"
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
+export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
 
 if [ -r ~/.aliases ]; then
   source ~/.aliases
@@ -38,10 +40,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-set -o vi
-export EDITOR=vim
-export GREP_COLOR="auto"
-
 # source /opt/intel/mkl/bin/mklvars.sh intel64 ilp64
 # source /opt/intel/mkl/bin/mklvars.sh
 
@@ -67,3 +65,5 @@ unset __conda_setup
 # Prelim:
 #    conda create --name code
 test -d /opt/homebrew/Caskroom/miniconda/base/envs/code && conda activate code
+
+export DOTFILES_LOADED_ZSHRC=$SHLVL

@@ -35,6 +35,9 @@ ln -s ~/repos/tvogels01/dotfiles/dot.gitignore_global ~/.gitignore_global
 ln -s ~/repos/tvogels01/dotfiles/dot.psqlrc           ~/.psqlrc
 ln -s ~/repos/tvogels01/dotfiles/dot.sreenrc          ~/.sreenrc
 ln -s ~/repos/tvogels01/dotfiles/dot.vimrc            ~/.vimrc
+ln -s ~/repos/tvogels01/dotfiles/dot.zlogin           ~/.zlogin
+ln -s ~/repos/tvogels01/dotfiles/dot.zlogout          ~/.zlogout
+ln -s ~/repos/tvogels01/dotfiles/dot.zprofile         ~/.zprofile
 ln -s ~/repos/tvogels01/dotfiles/dot.zshrc            ~/.zshrc
 ```
 

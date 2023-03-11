@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # target: ~/.bash_profile
 
 # Update brewed path

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # target: ~/.bashrc
 
 set -o vi

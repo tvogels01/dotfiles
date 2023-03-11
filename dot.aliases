@@ -11,3 +11,5 @@ alias h='history'
 alias up='cd ..'
 
 alias od='/Applications/Xcode.app/Contents/Developer/usr/bin/opendiff'
+
+export DOTFILES_LOADED_ALIASES=$SHLVL
