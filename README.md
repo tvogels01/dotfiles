@@ -83,3 +83,5 @@ vscodevim.vim-1.25.2
 brew bundle
 conda update conda
 ```
+
+Also try: `softwareupdate --list`

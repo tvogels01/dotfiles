@@ -40,12 +40,18 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# source /opt/intel/mkl/bin/mklvars.sh intel64 ilp64
-# source /opt/intel/mkl/bin/mklvars.sh
+# Adding version control info
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats '%s:%b:%u%c'
+zstyle ':vcs_info:*' check-for-changes true
+
+setopt PROMPT_SUBST
+RPROMPT=\$vcs_info_msg_0_
 
 # Prelim:
 #   brew install miniconda
-#   conda init "$(basename "${SHELL}")"
+#   conda init "$(basename "${SHELL}")" #=> see below
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
