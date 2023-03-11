@@ -40,14 +40,18 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Adding version control info
+# Begin of vcs_info: Adding version control info to prompt
 autoload -Uz vcs_info
 precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '%s:%b:%u%c'
-zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:git:*' check-for-changes true
+# Default: " (%s)-[%b]%u%c-"
+zstyle ':vcs_info:git:*' formats '%s:%b %u%c'
+# Default: " (%s)-[%b|%a]%u%c-"
+zstyle ':vcs_info:git:*' actionformats '%s-%a:%b %u%c'
 
-setopt PROMPT_SUBST
+setopt prompt_subst
 RPROMPT=\$vcs_info_msg_0_
+# End of vcsinfo
 
 # Prelim:
 #   brew install miniconda
