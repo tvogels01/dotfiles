@@ -5,6 +5,8 @@
 bindkey -v
 set -o vi
 export EDITOR=vim
+# When you are too lazy for "Esc /"
+bindkey "^R" history-incremental-search-backward
 
 export GREP_COLOR="auto"
 
@@ -18,6 +20,9 @@ export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
 # Smarter "cd"
 setopt auto_cd
 cdpath=(~/repos/*)
+
+# Surely this won't annoy me
+setopt correct
 
 # Aliases shared across shells
 if [ -r ~/.aliases ]; then
@@ -37,8 +42,13 @@ done
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory
+setopt append_history
+setopt share_history
 # End of lines configured by zsh-newuser-install
+setopt hist_ignoredups
+
+# Allow '#' in interactive shell
+setopt interactivecomments
 
 # The following lines were added by compinstall
 zstyle :compinstall filename ~/.zshrc
@@ -63,8 +73,10 @@ if [ -n "$SSH_CLIENT" ]; then
 else
   PROMPT="[\$vcs_info_msg_0_] %F{cyan}%2~%f %# "
 fi
-ZLE_RPROMPT_INDENT=1
 # End of vcsinfo
+#
+# Zsh Line Editor (zshzle)
+ZLE_RPROMPT_INDENT=1
 
 # Prelim:
 #   brew install miniconda
