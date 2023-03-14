@@ -58,7 +58,11 @@ zstyle ':vcs_info:git:*' formats '%F{green}%b%f%F{red}%u%c%f'
 # Default: " (%s)-[%b|%a]%u%c-"
 zstyle ':vcs_info:git:*' actionformats '%s-%a %F{green}%b%f%F{red}%u%c%f'
 
-PROMPT="[\$vcs_info_msg_0_] %F{cyan}%2~%f %# "
+if [ -n "$SSH_CLIENT" ]; then
+  PROMPT="[\$vcs_info_msg_0_] %F{blue}%n@%m%f %F{cyan}%2~%f %# "
+else
+  PROMPT="[\$vcs_info_msg_0_] %F{cyan}%2~%f %# "
+fi
 ZLE_RPROMPT_INDENT=1
 # End of vcsinfo
 
