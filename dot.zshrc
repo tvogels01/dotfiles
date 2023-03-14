@@ -5,6 +5,7 @@
 bindkey -v
 set -o vi
 export EDITOR=vim
+
 export GREP_COLOR="auto"
 
 # See Brewfile for specific versions
@@ -53,11 +54,11 @@ autoload -Uz vcs_info
 precmd() { vcs_info }
 zstyle ':vcs_info:git:*' check-for-changes true
 # Default: " (%s)-[%b]%u%c-"
-zstyle ':vcs_info:git:*' formats '[%F{green}%b%f %F{red}%u%c%f]'
+zstyle ':vcs_info:git:*' formats '%F{green}%b%f%F{red}%u%c%f'
 # Default: " (%s)-[%b|%a]%u%c-"
-zstyle ':vcs_info:git:*' actionformats '[%s-%a %F{green}%b%f %F{red}%u%c%f]'
+zstyle ':vcs_info:git:*' actionformats '%s-%a %F{green}%b%f%F{red}%u%c%f'
 
-RPROMPT=\$vcs_info_msg_0_
+PROMPT="[\$vcs_info_msg_0_] %F{cyan}%2~%f %# "
 ZLE_RPROMPT_INDENT=1
 # End of vcsinfo
 
