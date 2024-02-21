@@ -80,7 +80,7 @@ Add to `~/Library/Application\ Support/Code/User/settings.json`:
 
 Search in their market place:
 ```shell
-jq -r < ~/.vscode/extensions/extensions.json '.[].relativeLocation'  | sort
+code --list-extensions --show-versions
 ```
 ```text
 amazonwebservices.aws-toolkit-vscode-1.70.0

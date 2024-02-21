@@ -13,7 +13,7 @@ export GREP_COLOR="auto"
 # See Brewfile for specific versions
 typeset -U path
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
-export PATH="/opt/homebrew/opt/node@16/bin:$PATH"
+export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
 
