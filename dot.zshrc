@@ -13,9 +13,8 @@ export GREP_COLOR="auto"
 # See Brewfile for specific versions
 typeset -U path
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
-export PATH="/opt/homebrew/opt/node@18/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
-export PATH="/opt/homebrew/opt/postgresql@14/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # Smarter "cd"
 setopt auto_cd
@@ -28,6 +27,10 @@ setopt correct
 if [ -r ~/.aliases ]; then
   source ~/.aliases
 fi
+
+# NVM configuration (see "brew info nvm")
+export NVM_DIR="$HOME/.nvm"
+source "/opt/homebrew/opt/nvm/nvm.sh"
 
 # Some scripts are broken in /usr/local/share/zsh/site-functions ?
 for f in \

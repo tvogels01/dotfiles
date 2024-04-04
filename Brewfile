@@ -31,7 +31,10 @@ brew "leiningen"
 # brew "monetdb"
 cask "miniconda"
 # x86 -- brew "mit-scheme"
-brew "node@18"
+# See dot.zshrc for nvm
+# Run:
+#   nvm install --lts
+#   nvm use --lts
 brew "nvm"
 brew "openjdk@11"
 # brew "pgbadger"
