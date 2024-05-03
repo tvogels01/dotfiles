@@ -13,7 +13,7 @@ export GREP_COLOR="auto"
 # See Brewfile for specific versions
 typeset -U path
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
 
 # Smarter "cd"
@@ -35,8 +35,10 @@ source "/opt/homebrew/opt/nvm/nvm.sh"
 # Some scripts are broken in /usr/local/share/zsh/site-functions ?
 for f in \
   /opt/homebrew/share/zsh/site-functions/_aws \
+  /opt/homebrew/share/zsh/site-functions/_black \
   /opt/homebrew/share/zsh/site-functions/_gh \
   /opt/homebrew/share/zsh/site-functions/_lein \
+  /opt/homebrew/share/zsh/site-functions/aws_zsh_completer.sh \
 ; do
   test -f "$f" && source "$f"
 done
@@ -77,7 +79,7 @@ else
   PROMPT="[\$vcs_info_msg_0_] %F{cyan}%2~%f %# "
 fi
 # End of vcsinfo
-#
+
 # Zsh Line Editor (zshzle)
 ZLE_RPROMPT_INDENT=1
 

@@ -11,3 +11,7 @@ conda list
 ```
 
 More at [cheatsheet.html](https://conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
+
+## Visual Studio Code
+
+* [Install command line tools](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
