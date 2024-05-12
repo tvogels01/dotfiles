@@ -2,6 +2,7 @@
 
 # dotfile target: ~/.zshrc
 
+# Use VI keybindings!
 bindkey -v
 set -o vi
 export EDITOR=vim
@@ -23,15 +24,13 @@ cdpath=(~/repos/*)
 # Surely this won't annoy me
 setopt correct
 
-# Aliases shared across shells
-if [ -r ~/.aliases ]; then
-  source ~/.aliases
-fi
+# The following lines were added by compinstall
+zstyle :compinstall filename ~/.zshrc
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
 
-# NVM configuration (see "brew info nvm")
-export NVM_DIR="$HOME/.nvm"
-source "/opt/homebrew/opt/nvm/nvm.sh"
-
+# TODO(tom): Move this to a profile file?
 # Some scripts are broken in /usr/local/share/zsh/site-functions ?
 for f in \
   /opt/homebrew/share/zsh/site-functions/_aws \
@@ -42,6 +41,11 @@ for f in \
 ; do
   test -f "$f" && source "$f"
 done
+
+# Aliases shared across shells
+if [ -r ~/.aliases ]; then
+  source ~/.aliases
+fi
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -54,12 +58,6 @@ setopt hist_ignoredups
 
 # Allow '#' in interactive shell
 setopt interactivecomments
-
-# The following lines were added by compinstall
-zstyle :compinstall filename ~/.zshrc
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
 
 # Begin of vcs_info: Adding version control info to prompt
 setopt prompt_subst
@@ -82,6 +80,10 @@ fi
 
 # Zsh Line Editor (zshzle)
 ZLE_RPROMPT_INDENT=1
+
+# NVM configuration (see "brew info nvm")
+export NVM_DIR="$HOME/.nvm"
+source "/opt/homebrew/opt/nvm/nvm.sh"
 
 # Prelim:
 #   brew install miniconda

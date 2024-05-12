@@ -17,9 +17,7 @@ brew bundle
 ### Conda
 
 ```shell
-brew install conda
-conda update conda
-conda create -n code
+conda create --name code
 ```
 
 ### Git
@@ -80,30 +78,39 @@ Add to `~/Library/Application\ Support/Code/User/settings.json`:
 
 Search in their market place:
 ```shell
-code --list-extensions --show-versions
+code --list-extensions --show-versions | sort
 ```
 ```text
-amazonwebservices.aws-toolkit-vscode-1.70.0
-betterthantomorrow.calva-2.0.353
-betterthantomorrow.calva-spritz-1.0.4
-elmtooling.elm-ls-vscode-2.6.0
-github.copilot-1.83.41
-github.vscode-pull-request-github-0.62.0
-hbenl.vscode-test-explorer-2.21.1
-kavod-io.vscode-jest-test-adapter-0.8.1
-ms-azuretools.vscode-docker-1.25.0
-ms-ossdata.vscode-postgresql-0.3.0
-ms-python.isort-2022.8.0
-ms-python.python-2023.4.1
-ms-python.vscode-pylance-2023.4.30
-ms-toolsai.jupyter-2023.2.1200692131
-ms-toolsai.jupyter-keymap-1.1.0
-ms-toolsai.jupyter-renderers-1.0.15
-ms-toolsai.vscode-jupyter-cell-tags-0.1.8
-ms-toolsai.vscode-jupyter-slideshow-0.1.5
-ms-vscode.live-server-0.4.7
-ms-vscode.test-adapter-converter-0.1.7
-vscodevim.vim-1.25.2
+amazonwebservices.amazon-q-vscode@1.3.0
+amazonwebservices.aws-toolkit-vscode@3.2.0
+betterthantomorrow.calva-spritz@1.0.5
+betterthantomorrow.calva@2.0.452
+elmtooling.elm-ls-vscode@2.8.0
+esbenp.prettier-vscode@10.4.0
+github.copilot-chat@0.15.1
+github.copilot@1.190.0
+github.vscode-pull-request-github@0.88.1
+hbenl.vscode-test-explorer@2.21.1
+ms-azuretools.vscode-docker@1.29.1
+ms-ossdata.vscode-postgresql@0.3.0
+ms-python.debugpy@2024.6.0
+ms-python.isort@2023.10.1
+ms-python.python@2024.6.0
+ms-python.vscode-pylance@2024.5.1
+ms-toolsai.jupyter-keymap@1.1.2
+ms-toolsai.jupyter-renderers@1.0.17
+ms-toolsai.jupyter@2024.4.0
+ms-toolsai.vscode-jupyter-cell-tags@0.1.9
+ms-toolsai.vscode-jupyter-slideshow@0.1.6
+ms-vscode.live-server@0.4.13
+ms-vscode.test-adapter-converter@0.1.9
+orta.vscode-jest@6.2.5
+redhat.java@1.30.0
+rheller.alive@0.4.4
+usernamehw.errorlens@3.17.0
+vscjava.vscode-java-debug@0.57.0
+vscjava.vscode-java-test@0.41.1
+vscodevim.vim@1.27.2
 ```
 
 ## Updating

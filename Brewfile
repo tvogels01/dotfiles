@@ -6,13 +6,14 @@
 #     open https://brew.sh
 # 3. Install packagees
 #     brew bundle
+#
+# This list is alphabetically sorted.
 
-brew "aws-shell"
 brew "aws-sam-cli"
+brew "aws-shell"
 brew "awscli"
 brew "black"
 brew "checkbashisms"
-# brew "clisp"
 brew "clojure"
 brew "cowsay"
 brew "dos2unix"
@@ -21,28 +22,20 @@ brew "fortune"
 brew "gh"
 brew "ghc"
 brew "git"
-brew "gti"
 brew "gpg"
+brew "gti"
 brew "htop"
 brew "iperf3"
 brew "jq"
 brew "jsonpp"
 brew "leiningen"
-# brew "monetdb"
-cask "miniconda"
-# x86-only -- brew "mit-scheme"
-# See dot.zshrc for nvm
-# Run:
-#   nvm install --lts
-#   nvm use --lts
 brew "nvm"
 brew "openjdk@11"
 brew "openjdk@17"
-# brew "pgbadger"
 brew "postgresql@15"
-brew "python@3.12"
+brew "gnu-prolog"
 brew "python-tk@3.12"
-# cask "racket"
+brew "python@3.12"
 brew "readline"
 brew "rlwrap"
 brew "sbcl"
@@ -50,3 +43,6 @@ brew "sl"
 brew "sqlite"
 brew "wget"
 brew "xonsh"
+
+cask "miniconda"
+cask "warp"
