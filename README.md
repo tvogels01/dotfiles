@@ -43,7 +43,7 @@ ln -s ~/repos/tvogels01/dotfiles/dot.editorconfig     ~/.editorconfig
 ln -s ~/repos/tvogels01/dotfiles/dot.gitconfig_base   ~/.gitconfig_base
 ln -s ~/repos/tvogels01/dotfiles/dot.gitignore_global ~/.gitignore_global
 ln -s ~/repos/tvogels01/dotfiles/dot.psqlrc           ~/.psqlrc
-ln -s ~/repos/tvogels01/dotfiles/dot.sreenrc          ~/.sreenrc
+ln -s ~/repos/tvogels01/dotfiles/dot.screenrc          ~/.screenrc
 ln -s ~/repos/tvogels01/dotfiles/dot.vimrc            ~/.vimrc
 ln -s ~/repos/tvogels01/dotfiles/dot.zlogin           ~/.zlogin
 ln -s ~/repos/tvogels01/dotfiles/dot.zlogout          ~/.zlogout
