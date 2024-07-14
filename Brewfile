@@ -41,6 +41,7 @@ brew "rlwrap"
 brew "sbcl"
 brew "sl"
 brew "sqlite"
+brew "tiger-vnc"
 brew "wget"
 brew "xonsh"
 
