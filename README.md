@@ -17,6 +17,7 @@ brew bundle
 ### Conda
 
 ```shell
+brew install miniconda
 conda create --name code
 ```
 
@@ -117,7 +118,7 @@ vscodevim.vim@1.27.2
 
 ```
 brew bundle
-conda update conda
+conda update --all
 ```
 
 Also try: `softwareupdate --list`
