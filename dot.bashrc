@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# target: ~/.bashrc
+# dotfile target: ~/.bashrc
 
 set -o vi
 export EDITOR=vim

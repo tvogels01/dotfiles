@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# target: ~/.bash_profile
+# dotfile target: ~/.bash_profile
 
 # Update brewed path
 PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH

@@ -1,5 +1,5 @@
 #!/bin/bash
 
-# target: ~/.bash_logout
+# dotfile target: ~/.bash_logout
 
 /usr/bin/clear

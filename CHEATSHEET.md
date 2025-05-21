@@ -12,17 +12,27 @@ conda list
 
 More at [cheatsheet.html](https://conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
 
-## `npm` / TypeScript
-
-```shell
-npm install --global typescript
-```
-
 ## `nvm`
 
 ```shell
 nvm install --lts
-nvm use --lts
+nvm use --lts --save
+```
+
+Then leverate the new `.nvmrc` file:
+```shell
+nvm use
+```
+
+## `npm` and TypeScript
+
+Update `npm`:
+```shell
+npm install --global npm
+```
+
+```shell
+npm install --global typescript
 ```
 
 ## Visual Studio Code

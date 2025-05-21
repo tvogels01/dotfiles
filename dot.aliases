@@ -1,4 +1,4 @@
-# target: ~/.aliases
+# dotfile target: ~/.aliases
 
 alias la='ls -AG'
 alias ll='ls -alF'

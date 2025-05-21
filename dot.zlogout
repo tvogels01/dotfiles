@@ -1,5 +1,5 @@
 #!/bin/zsh
 
-# target: ~/.zlogout
+# dotfile target: ~/.zlogout
 
 /usr/bin/clear

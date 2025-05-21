@@ -1,4 +1,4 @@
-# target: ~/.screenrc
+# dotfile target: ~/.screenrc
 
 # Use ^j instead of ^a to control screen
 escape ^jJ

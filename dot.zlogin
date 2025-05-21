@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# target: ~/.zlogin
+# dotfile target: ~/.zlogin
 
 echo "--"
 fortune

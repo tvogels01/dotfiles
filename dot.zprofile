@@ -1,6 +1,6 @@
 #!/bin/zsh
 
-# target: ~/.zprofile
+# dotfile target: ~/.zprofile
 
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_PREFIX="/opt/homebrew"

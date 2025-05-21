@@ -1,4 +1,4 @@
-" target: ~/.vimrc
+" dotfile target: ~/.vimrc
 "
 " General
 " set backup

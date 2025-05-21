@@ -1,4 +1,4 @@
-# target: ~/.gitconfig_base
+# dotfile target: ~/.gitconfig_base
 
 # Append these two lines to ~/.gitconfig:
 # [include]
