@@ -1,6 +1,6 @@
 # dotfiles
 
-_Basic setup files and setup instructions_ <!-- markdownlint-disable MD036 -->"
+_Basic setup files and setup instructions_ <!-- markdownlint-disable MD036 -->
 
 These are the configuration files and settings that I'm using on my computers.
 Use at [your own risk](./LICENSE).

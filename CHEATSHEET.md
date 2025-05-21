@@ -19,7 +19,8 @@ nvm install --lts
 nvm use --lts --save
 ```
 
-Then leverate the new `.nvmrc` file:
+Then leverage the new `.nvmrc` file:
+
 ```shell
 nvm use
 ```
@@ -27,6 +28,7 @@ nvm use
 ## `npm` and TypeScript
 
 Update `npm`:
+
 ```shell
 npm install --global npm
 ```
