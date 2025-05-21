@@ -1,29 +1,31 @@
 # dotfiles
 
-_Basic setup files and setup instructions_
+_Basic setup files and setup instructions_ <!-- markdownlint-disable MD036 -->"
 
 These are the configuration files and settings that I'm using on my computers.
+Use at [your own risk](./LICENSE).
 
 ## Getting Started
 
-### Additional Software on macOS
+### Add Software on macOS
 
-See [Brewfile](./Brewfile) to install basic software.
+See [Brewfile](./Brewfile) to install basic software using [`brew`](https://brew.sh).
 
 ```shell
 brew bundle
 ```
 
-### Conda
+### Add Conda
 
 ```shell
 brew install miniconda
 conda create --name code
 ```
 
-### Git
+### Configure Git
 
 Git configuration:
+
 ```shell
 git config --global user.name "My Name Here"
 git config --global user.email "my_email@example.com"
@@ -31,9 +33,10 @@ git config --global user.email "my_email@example.com"
 
 See also [dot.gitconfig\_base](./dot.gitconfig_base).
 
-### "Installation"
+### "Installation" of dot files
 
-Until I whip up something fancier (assuming you organize your clones in `~/repos/owner/name`):
+Until I whip up something fancier, you can run (assuming you organize your clones in `~/repos/owner/name`):
+
 ```shell
 ln -s ~/repos/tvogels01/dotfiles/dot.aliases          ~/.aliases
 ln -s ~/repos/tvogels01/dotfiles/dot.bash_logout      ~/.bash_logout
@@ -57,6 +60,7 @@ ln -s ~/repos/tvogels01/dotfiles/dot.zshrc            ~/.zshrc
 ### Settings
 
 Add to `~/Library/Application\ Support/Code/User/settings.json`:
+
 ```json
 {
     "editor.formatOnSave": true,
@@ -78,45 +82,66 @@ Add to `~/Library/Application\ Support/Code/User/settings.json`:
 ### Extensions
 
 Search in their market place:
+
 ```shell
 code --list-extensions --show-versions | sort
 ```
+
 ```text
-amazonwebservices.amazon-q-vscode@1.3.0
-amazonwebservices.aws-toolkit-vscode@3.2.0
+amazonwebservices.amazon-q-vscode@1.68.0
+amazonwebservices.aws-toolkit-vscode@3.62.0
 betterthantomorrow.calva-spritz@1.0.5
-betterthantomorrow.calva@2.0.452
-elmtooling.elm-ls-vscode@2.8.0
-esbenp.prettier-vscode@10.4.0
-github.copilot-chat@0.15.1
-github.copilot@1.190.0
-github.vscode-pull-request-github@0.88.1
-hbenl.vscode-test-explorer@2.21.1
-ms-azuretools.vscode-docker@1.29.1
-ms-ossdata.vscode-postgresql@0.3.0
-ms-python.debugpy@2024.6.0
-ms-python.isort@2023.10.1
-ms-python.python@2024.6.0
-ms-python.vscode-pylance@2024.5.1
+betterthantomorrow.calva@2.0.513
+davidanson.vscode-markdownlint@0.59.0
+docker.docker@0.7.0
+esbenp.prettier-vscode@11.0.0
+github.copilot-chat@0.27.1
+github.copilot@1.322.0
+github.vscode-pull-request-github@0.110.0
+hbenl.vscode-test-explorer@2.22.1
+modular-mojotools.vscode-mojo@25.3.0
+mongodb.mongodb-vscode@1.13.2
+ms-azuretools.vscode-docker@1.29.6
+ms-ossdata.vscode-pgsql@1.4.1
+ms-python.debugpy@2025.8.0
+ms-python.isort@2025.0.0
+ms-python.python@2025.6.1
+ms-python.vscode-pylance@2025.5.1
 ms-toolsai.jupyter-keymap@1.1.2
-ms-toolsai.jupyter-renderers@1.0.17
-ms-toolsai.jupyter@2024.4.0
+ms-toolsai.jupyter-renderers@1.1.0
+ms-toolsai.jupyter@2025.4.1
 ms-toolsai.vscode-jupyter-cell-tags@0.1.9
 ms-toolsai.vscode-jupyter-slideshow@0.1.6
-ms-vscode.live-server@0.4.13
-ms-vscode.test-adapter-converter@0.1.9
-orta.vscode-jest@6.2.5
-redhat.java@1.30.0
-rheller.alive@0.4.4
-usernamehw.errorlens@3.17.0
-vscjava.vscode-java-debug@0.57.0
-vscjava.vscode-java-test@0.41.1
-vscodevim.vim@1.27.2
+ms-vscode.live-server@0.4.15
+ms-vscode.test-adapter-converter@0.2.1
+orta.vscode-jest@6.4.3
+redhat.java@1.42.0
+rheller.alive@0.4.9
+usernamehw.errorlens@3.26.0
+visualstudioexptteam.intellicode-api-usage-examples@0.2.9
+visualstudioexptteam.vscodeintellicode@1.3.2
+vscjava.vscode-gradle@3.16.4
+vscjava.vscode-java-debug@0.58.2
+vscjava.vscode-java-dependency@0.24.1
+vscjava.vscode-java-pack@0.29.0
+vscjava.vscode-java-test@0.43.1
+vscjava.vscode-maven@0.44.0
+vscodevim.vim@1.29.2
 ```
 
 ## Updating
 
+### Updating the `Brewfile`
+
+Start with:
+
+```shell
+brew bundle dump --describe --file=Brewfile.new
 ```
+
+### Updating versions
+
+```shell
 brew bundle
 conda update --all
 ```
