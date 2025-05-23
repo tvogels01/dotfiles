@@ -12,14 +12,25 @@ conda list
 
 More at [cheatsheet.html](https://conda.io/projects/conda/en/latest/user-guide/cheatsheet.html)
 
-## `nvm`
+## `nvm` to manage Node.js versions
+
+Start with the latest (LTS) version of Node.js
+after installing [`nvm`](https://github.com/nvm-sh/nvm)
+using `brew bundle`:
 
 ```shell
 nvm install --lts
 nvm use --lts --save
 ```
 
-Then leverage the new `.nvmrc` file:
+Verify latest versions (and that `nvm` is being used):
+
+```shell
+type node
+node --version
+```
+
+Leverage the new `.nvmrc` file:
 
 ```shell
 nvm use
@@ -27,14 +38,17 @@ nvm use
 
 ## `npm` and TypeScript
 
-Update `npm`:
+Install latest versions of `npm`, TypeScript, and
+a [runner](https://nodejs.org/en/learn/typescript/run):
 
 ```shell
-npm install --global npm
+npm install --global npm@latest
+npm --version
 ```
 
 ```shell
-npm install --global typescript
+npm install --global typescript tsx
+tsc --version
 ```
 
 ## Visual Studio Code
