@@ -112,3 +112,5 @@ unset __conda_setup
 test -d /opt/homebrew/Caskroom/miniconda/base/envs/code && conda activate code
 
 export DOTFILES_LOADED_ZSHRC=$SHLVL
+
+PATH=~/.console-ninja/.bin:$PATH

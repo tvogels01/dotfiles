@@ -12,3 +12,5 @@ if [ type __git_ps1 > /dev/null 2>&1 ]; then
 else
   export PS1='\h:\W \u\$ '
 fi
+
+PATH=~/.console-ninja/.bin:$PATH

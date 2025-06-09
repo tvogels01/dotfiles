@@ -88,21 +88,20 @@ code --list-extensions --show-versions | sort
 ```
 
 ```text
-amazonwebservices.amazon-q-vscode@1.68.0
-amazonwebservices.aws-toolkit-vscode@3.62.0
+amazonwebservices.amazon-q-vscode@1.71.0
+amazonwebservices.aws-toolkit-vscode@3.64.0
+astro-build.astro-vscode@2.15.4
 betterthantomorrow.calva-spritz@1.0.5
-betterthantomorrow.calva@2.0.513
-davidanson.vscode-markdownlint@0.59.0
-docker.docker@0.7.0
+betterthantomorrow.calva@2.0.519
+davidanson.vscode-markdownlint@0.60.0
 esbenp.prettier-vscode@11.0.0
-github.copilot-chat@0.27.1
-github.copilot@1.322.0
+github.copilot-chat@0.27.3
+github.copilot@1.331.0
 github.vscode-pull-request-github@0.110.0
 hbenl.vscode-test-explorer@2.22.1
-modular-mojotools.vscode-mojo@25.3.0
-mongodb.mongodb-vscode@1.13.2
-ms-azuretools.vscode-docker@1.29.6
-ms-ossdata.vscode-pgsql@1.4.1
+mongodb.mongodb-vscode@1.13.3
+ms-azuretools.vscode-containers@2.0.3
+ms-ossdata.vscode-pgsql@1.4.2
 ms-python.debugpy@2025.8.0
 ms-python.isort@2025.0.0
 ms-python.python@2025.6.1
@@ -112,21 +111,11 @@ ms-toolsai.jupyter-renderers@1.1.0
 ms-toolsai.jupyter@2025.4.1
 ms-toolsai.vscode-jupyter-cell-tags@0.1.9
 ms-toolsai.vscode-jupyter-slideshow@0.1.6
-ms-vscode.live-server@0.4.15
 ms-vscode.test-adapter-converter@0.2.1
 orta.vscode-jest@6.4.3
-redhat.java@1.42.0
-rheller.alive@0.4.9
 usernamehw.errorlens@3.26.0
-visualstudioexptteam.intellicode-api-usage-examples@0.2.9
-visualstudioexptteam.vscodeintellicode@1.3.2
-vscjava.vscode-gradle@3.16.4
-vscjava.vscode-java-debug@0.58.2
-vscjava.vscode-java-dependency@0.24.1
-vscjava.vscode-java-pack@0.29.0
-vscjava.vscode-java-test@0.43.1
-vscjava.vscode-maven@0.44.0
-vscodevim.vim@1.29.2
+vscodevim.vim@1.30.1
+wallabyjs.console-ninja@1.0.451
 ```
 
 ## Updating

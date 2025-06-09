@@ -1,0 +1,11 @@
+# VS Code extensions
+vscode "betterthantomorrow.calva"
+vscode "betterthantomorrow.calva-spritz"
+vscode "redhat.java"
+vscode "rheller.alive"
+vscode "vscjava.vscode-gradle"
+vscode "vscjava.vscode-java-debug"
+vscode "vscjava.vscode-java-dependency"
+vscode "vscjava.vscode-java-pack"
+vscode "vscjava.vscode-java-test"
+vscode "vscjava.vscode-maven"
