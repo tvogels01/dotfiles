@@ -81,7 +81,7 @@ Add to `~/Library/Application\ Support/Code/User/settings.json`:
 
 ### Extensions
 
-Search in their market place:
+Search in their market place (for either `code` or `cursor`):
 
 ```shell
 code --list-extensions --show-versions | sort
@@ -91,9 +91,10 @@ code --list-extensions --show-versions | sort
 amazonwebservices.amazon-q-vscode@1.71.0
 amazonwebservices.aws-toolkit-vscode@3.64.0
 astro-build.astro-vscode@2.15.4
-betterthantomorrow.calva-spritz@1.0.5
-betterthantomorrow.calva@2.0.519
+christian-kohler.npm-intellisense@1.4.5
 davidanson.vscode-markdownlint@0.60.0
+dbaeumer.vscode-eslint@3.0.10
+editorconfig.editorconfig@0.17.4
 esbenp.prettier-vscode@11.0.0
 github.copilot-chat@0.27.3
 github.copilot@1.331.0
@@ -114,6 +115,8 @@ ms-toolsai.vscode-jupyter-slideshow@0.1.6
 ms-vscode.test-adapter-converter@0.2.1
 orta.vscode-jest@6.4.3
 usernamehw.errorlens@3.26.0
+visualstudioexptteam.intellicode-api-usage-examples@0.2.9
+visualstudioexptteam.vscodeintellicode@1.3.2
 vscodevim.vim@1.30.1
 wallabyjs.console-ninja@1.0.451
 ```

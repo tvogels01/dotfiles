@@ -17,6 +17,8 @@ tap "mongodb/brew"
 cask "miniconda"
 # Rust-based terminal
 cask "warp"
+# Create and run Linux containers using lightweight virtual machines
+cask "container"
 
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
@@ -88,6 +90,8 @@ brew "rlwrap"
 brew "sbcl"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
+# View Spaces / Virtual Desktops in the menu bar
+cask "spaceman"
 # Internet file retriever
 brew "wget"
 # Python-powered, cross-platform, Unix-gazing shell language and command prompt
