@@ -9,6 +9,7 @@
 #
 # The lists are alphabetically sorted.
 
+tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "mongodb/brew"
@@ -58,6 +59,8 @@ brew "gnu-prolog"
 brew "gti"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
 # Improved top (interactive process viewer)
 brew "htop"
 # Update of iperf: measures TCP, UDP, and SCTP bandwidth
