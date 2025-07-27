@@ -51,6 +51,15 @@ npm install --global typescript tsx
 tsc --version
 ```
 
+## Jupyter Lab VIM
+
+```shell
+conda install jupyterlab
+pip install jupyterlab-vim
+```
+
+See [`jupyterlab-vim`](https://pypi.org/project/jupyterlab-vim/).
+
 ## Visual Studio Code
 
 * [Install command line tools](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)

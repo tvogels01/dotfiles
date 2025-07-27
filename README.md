@@ -19,8 +19,15 @@ brew bundle
 
 ```shell
 brew install miniconda
+
+conda config --add channels defaults
+conda config --add channels conda-forge
+conda config --set channel_priority strict
+
 conda create --name code
 ```
+
+(Anything drops into `code` unless I pick a specific environment for a project.)
 
 ### Configure Git
 
