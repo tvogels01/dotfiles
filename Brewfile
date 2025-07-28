@@ -39,6 +39,8 @@ brew "clojure"
 brew "cowsay"
 # Convert text between DOS, UNIX, and Mac formats
 brew "dos2unix"
+# Embeddable SQL OLAP Database Management System
+brew "duckdb"
 # Functional programming language for building browser-based GUIs
 brew "elm"
 # Infamous electronic fortune-cookie generator
