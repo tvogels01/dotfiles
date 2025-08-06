@@ -2,6 +2,9 @@
 
 # From https://help.github.com/articles/ignoring-files
 # git config --global core.excludesfile ~/.gitignore_global
+#
+# Make sure that a repo has a sufficient .gitignore file
+# so that contributors don't accidentally submit, say, *.jar files.
 
 # Compiled source #
 ###################
@@ -28,7 +31,6 @@
 # Logs and databases #
 ######################
 *.log
-*.sql
 *.sqlite
 
 # OS generated files #
@@ -46,8 +48,3 @@ Thumbs.db
 ################
 *~
 *.swp
-
-# Not from the original file #
-##############################
-.vscode/
-__pycache__/
