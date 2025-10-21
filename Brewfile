@@ -20,6 +20,8 @@ cask "miniconda"
 cask "warp"
 # Create and run Linux containers using lightweight virtual machines
 cask "container"
+# Universal database tool and SQL client
+cask "dbeaver-community"
 
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
@@ -29,6 +31,8 @@ brew "aws-sam-cli"
 brew "aws-shell"
 # Official Amazon AWS command-line interface
 brew "awscli"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
 # Python code formatter
 brew "black"
 # Checks for bashisms in shell scripts
@@ -95,8 +99,6 @@ brew "rlwrap"
 brew "sbcl"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
-# View Spaces / Virtual Desktops in the menu bar
-cask "spaceman"
 # Internet file retriever
 brew "wget"
 # Python-powered, cross-platform, Unix-gazing shell language and command prompt
