@@ -55,7 +55,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt append_history
-setopt share_history
+unsetopt share_history
 # End of lines configured by zsh-newuser-install
 setopt hist_ignoredups
 
