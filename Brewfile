@@ -97,6 +97,8 @@ brew "readline"
 brew "rlwrap"
 # Steel Bank Common Lisp system
 brew "sbcl"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # Internet file retriever
