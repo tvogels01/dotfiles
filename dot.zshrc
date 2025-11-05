@@ -15,7 +15,7 @@ export GREP_COLOR="auto"
 typeset -U path
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
 
 # See https://console-ninja.com
 export PATH="~/.console-ninja/.bin:$PATH"
