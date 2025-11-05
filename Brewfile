@@ -88,7 +88,7 @@ brew "openjdk@11"
 # Development kit for the Java programming language
 brew "openjdk@17"
 # Object-relational database system
-brew "postgresql@15"
+brew "postgresql@17"
 # Python interface to Tcl/Tk
 brew "python-tk@3.13"
 # Library for command-line editing
