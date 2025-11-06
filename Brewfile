@@ -14,6 +14,8 @@ tap "homebrew/bundle"
 tap "homebrew/services"
 tap "mongodb/brew"
 
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Minimal installer for conda
 cask "miniconda"
 # Rust-based terminal
@@ -39,6 +41,8 @@ brew "black"
 brew "checkbashisms"
 # Dynamic, general-purpose programming language
 brew "clojure"
+# Create and run Linux containers using lightweight virtual machines
+brew "container"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
 # Convert text between DOS, UNIX, and Mac formats
@@ -77,6 +81,10 @@ brew "jq"
 brew "jsonpp"
 # Build tool for Clojure
 brew "leiningen"
+# Web and API based SMTP testing tool
+brew "mailhog", restart_service: :changed
+# CLI for Node.js style checker and lint tool for Markdown files
+brew "markdownlint-cli"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
 # Manage multiple Node.js versions
@@ -87,6 +95,8 @@ brew "openjdk"
 brew "openjdk@11"
 # Development kit for the Java programming language
 brew "openjdk@17"
+# Framework for layout and rendering of i18n text
+brew "pango"
 # Object-relational database system
 brew "postgresql@17"
 # Python interface to Tcl/Tk
@@ -105,31 +115,3 @@ brew "sl"
 brew "wget"
 # Python-powered, cross-platform, Unix-gazing shell language and command prompt
 brew "xonsh"
-
-# VS Code extensions
-vscode "amazonwebservices.amazon-q-vscode"
-vscode "amazonwebservices.aws-toolkit-vscode"
-vscode "astro-build.astro-vscode"
-vscode "davidanson.vscode-markdownlint"
-vscode "esbenp.prettier-vscode"
-vscode "github.copilot"
-vscode "github.copilot-chat"
-vscode "github.vscode-pull-request-github"
-vscode "hbenl.vscode-test-explorer"
-vscode "mongodb.mongodb-vscode"
-vscode "ms-ossdata.vscode-pgsql"
-vscode "ms-python.debugpy"
-vscode "ms-python.isort"
-vscode "ms-python.python"
-vscode "ms-python.vscode-pylance"
-vscode "ms-toolsai.jupyter"
-vscode "ms-toolsai.jupyter-keymap"
-vscode "ms-toolsai.jupyter-renderers"
-vscode "ms-toolsai.vscode-jupyter-cell-tags"
-vscode "ms-toolsai.vscode-jupyter-slideshow"
-vscode "ms-vscode.test-adapter-converter"
-vscode "orta.vscode-jest"
-vscode "usernamehw.errorlens"
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
-vscode "visualstudioexptteam.vscodeintellicode"
-vscode "vscodevim.vim"
