@@ -12,6 +12,7 @@
 tap "heroku/brew"
 tap "homebrew/bundle"
 tap "homebrew/services"
+# xxx tap "modularml/packages"
 tap "mongodb/brew"
 
 # OpenAI's coding agent that runs in your terminal
@@ -20,8 +21,8 @@ cask "codex"
 cask "miniconda"
 # Rust-based terminal
 cask "warp"
-# Create and run Linux containers using lightweight virtual machines
-cask "container"
+# xxx # Create and run Linux containers using lightweight virtual machines
+# xxx cask "container"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 
@@ -39,12 +40,18 @@ brew "bash"
 brew "black"
 # Checks for bashisms in shell scripts
 brew "checkbashisms"
+# GNU CLISP, a Common Lisp implementation
+brew "clisp"
 # Dynamic, general-purpose programming language
 brew "clojure"
 # Create and run Linux containers using lightweight virtual machines
 brew "container"
+# Utility that creates projects from templates
+brew "cookiecutter"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
+# Text processing system for reStructuredText
+brew "docutils"
 # Convert text between DOS, UNIX, and Mac formats
 brew "dos2unix"
 # Embeddable SQL OLAP Database Management System
@@ -85,6 +92,8 @@ brew "leiningen"
 brew "mailhog", restart_service: :changed
 # CLI for Node.js style checker and lint tool for Markdown files
 brew "markdownlint-cli"
+# xxx # Modular developer CLI tool
+# xxx brew "modularml/packages/modular"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
 # Manage multiple Node.js versions
@@ -115,3 +124,5 @@ brew "sl"
 brew "wget"
 # Python-powered, cross-platform, Unix-gazing shell language and command prompt
 brew "xonsh"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
