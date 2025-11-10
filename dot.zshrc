@@ -2,6 +2,11 @@
 
 # dotfile target: ~/.zshrc
 
+# Better late than never.
+if [ -z "$DOTFILES_LOADED_ZPROFILE" ]; then
+  [ -r ~/.zprofile ] && source ~/.zprofile
+fi
+
 # Use VI keybindings!
 bindkey -v
 set -o vi
@@ -99,22 +104,5 @@ unset __conda_setup
 # Prelim:
 #    conda create --name code
 test -d /opt/homebrew/Caskroom/miniconda/base/envs/code && conda activate code
-
-# Some scripts are broken in /usr/local/share/zsh/site-functions ?
-for f in \
-  /opt/homebrew/share/zsh/site-functions/_aws \
-  /opt/homebrew/share/zsh/site-functions/_black \
-  /opt/homebrew/share/zsh/site-functions/_cookiecutter \
-  /opt/homebrew/share/zsh/site-functions/_gh \
-  /opt/homebrew/share/zsh/site-functions/_git \
-  /opt/homebrew/share/zsh/site-functions/_lein \
-  /opt/homebrew/share/zsh/site-functions/_npm \
-  /opt/homebrew/share/zsh/site-functions/_rg \
-  /opt/homebrew/share/zsh/site-functions/_sam \
-  /opt/homebrew/share/zsh/site-functions/aws_zsh_completer.sh \
-  /opt/homebrew/opt/nvm/etc/bash_completion.d/nvm \
-; do
-  test -f "$f" && source "$f"
-done
 
 export DOTFILES_LOADED_ZSHRC=$SHLVL
