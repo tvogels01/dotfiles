@@ -43,12 +43,16 @@ fi
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt append_history
-unsetopt share_history
+setopt share_history
 # End of lines configured by zsh-newuser-install
-setopt hist_ignoredups
+setopt hist_ignore_all_dups
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_reduce_blanks
+setopt inc_append_history
 
 # Allow '#' in interactive shell
 setopt interactivecomments
@@ -74,32 +78,5 @@ fi
 
 # Zsh Line Editor (zshzle)
 ZLE_RPROMPT_INDENT=1
-
-# NVM configuration (see "brew info nvm")
-export NVM_DIR="$HOME/.nvm"
-source "/opt/homebrew/opt/nvm/nvm.sh"
-
-# Prelim:
-#   brew install miniconda
-#   conda init "$(basename "${SHELL}")" #=> see below
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# Prelim:
-#    conda create --name code
-test -d /opt/homebrew/Caskroom/miniconda/base/envs/code && conda activate code
 
 export DOTFILES_LOADED_ZSHRC=$SHLVL

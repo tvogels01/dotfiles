@@ -28,6 +28,7 @@ conda activate code
 
 Anything drops into `code` unless I pick a specific environment for a project.
 Make sure that `dot.condarc` is already linked to from `~/.condarc`.
+The shell now loads Conda's activation hook lazily, so the first `conda`/`activate` command may take a moment while the hook initializes, but interactive startup stays fast.
 
 ### Configure Git
 
@@ -81,6 +82,8 @@ After sourcing `~/.aliases`, an `activate` helper is available. Run it in any pr
 1. Execute `nvm use` if a `.nvmrc` file is present.
 2. Activate the Conda environment whose name matches the current folder (if it exists).
 3. Source `.venv/bin/activate` when a local Python virtualenv is available.
+
+Both NVM and Conda hooks are loaded on demand the first time you use `nvm`, `node`, `npm`, or `conda`, keeping shell startup latency low.
 
 ## Visual Studio Code
 

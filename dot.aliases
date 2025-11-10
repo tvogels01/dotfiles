@@ -12,6 +12,54 @@ alias up='cd ..'
 
 alias od='/Applications/Xcode.app/Contents/Developer/usr/bin/opendiff'
 
+# --- Lazy loaders -----------------------------------------------------------
+
+# Delay NVM loading until node tooling is actually used.
+if [ -z "${NVM_DIR:-}" ] && [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && ! command -v nvm >/dev/null 2>&1; then
+  export NVM_DIR="$HOME/.nvm"
+  _DOTFILES_NVM_SCRIPT="/opt/homebrew/opt/nvm/nvm.sh"
+  _dotfiles_load_nvm() {
+    unset -f nvm node npm >/dev/null 2>&1 || true
+    # shellcheck disable=SC1090
+    . "$_DOTFILES_NVM_SCRIPT"
+  }
+  nvm() {
+    _dotfiles_load_nvm
+    nvm "$@"
+  }
+  node() {
+    _dotfiles_load_nvm
+    node "$@"
+  }
+  npm() {
+    _dotfiles_load_nvm
+    npm "$@"
+  }
+fi
+
+# Delay Conda shell hook until it is actually needed.
+_DOTFILES_CONDA_EXE="/opt/homebrew/Caskroom/miniconda/base/bin/conda"
+if [ -x "$_DOTFILES_CONDA_EXE" ] && ! typeset -f conda >/dev/null 2>&1; then
+  _dotfiles_load_conda() {
+    unalias conda 2>/dev/null || true
+    local shell_name="zsh"
+    if [ -n "${BASH_VERSION:-}" ]; then
+      shell_name="bash"
+    fi
+    local __conda_setup
+    __conda_setup="$("$_DOTFILES_CONDA_EXE" "shell.$shell_name" 'hook' 2> /dev/null)" || return
+    eval "$__conda_setup"
+    unset __conda_setup
+  }
+  _dotfiles_conda_proxy() {
+    _dotfiles_load_conda
+    conda "$@"
+  }
+  alias conda='_dotfiles_conda_proxy'
+fi
+
+# --- Helpers ----------------------------------------------------------------
+
 activate() {
   # 1) Node via nvm
   if [ -f .nvmrc ] && command -v nvm >/dev/null 2>&1; then
@@ -24,12 +72,14 @@ activate() {
     conda_base="$(conda info --base 2>/dev/null || true)"
     cwd_name="$(basename "$PWD")"
     if [ -n "$conda_base" ] && [ -n "$cwd_name" ] && [ -d "$conda_base/envs/$cwd_name" ]; then
+      echo "conda activate $cwd_name"
       conda activate "$cwd_name"
     fi
   fi
 
   # 3) Python virtualenv
   if [ -f .venv/bin/activate ]; then
+    echo "source .venv/bin/activate"
     # shellcheck disable=SC1091
     . .venv/bin/activate
   fi
