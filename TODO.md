@@ -10,7 +10,7 @@ We are about to give this dotfiles repo some overdue TLC, so this checklist will
 | [x] | Optimize shell startup | Lazy-load nvm & conda, expanded history settings, and documented the behavior. |
 | [x] | Restructure Brew bundles | Split into `Brewfile`, `Brewfile.dev`, `Brewfile.apps` (with `mas`) and documented usage. |
 | [x] | Harden macOS defaults script | Added `set -euo pipefail`, usage docs, and clearer `defaults` logging/checklist. |
-| [ ] | Enrich documentation | Capture workflows (VS Code, Conda, SSH) and keep cheatsheets in sync. |
+| [x] | Enrich documentation | README + cheat sheet now cover Conda tips, activate helper, SSH config, brew upgrades. |
 
 ## Working Instructions
 

@@ -65,3 +65,32 @@ See [`jupyterlab-vim`](https://pypi.org/project/jupyterlab-vim/).
 ## Visual Studio Code
 
 * [Install command line tools](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line)
+
+## `activate` helper
+
+Works from any project directory after `~/.aliases` is sourced:
+
+```shell
+activate   # runs nvm use -> conda activate <cwd> -> source .venv/bin/activate
+```
+
+You will see the commands echoed when Conda or a `.venv` activates; `nvm use` retains its default output.
+
+## Brew bundles
+
+```shell
+brew bundle                         # Core CLI + runtimes (Brewfile)
+brew bundle --file=Brewfile.dev     # Optional languages, DBs, utilities
+brew bundle --file=Brewfile.apps    # GUI + MAS apps
+./brew_upgrade_all.sh               # Upgrade every bundle sequentially
+brew bundle lock --file=Brewfile    # Capture exact versions (repeat per bundle)
+```
+
+## SSH
+
+```shell
+ln -s ~/repos/tvogels01/dotfiles/ssh_config ~/.ssh/config
+chmod 600 ~/.ssh/config
+```
+
+Add host overrides below the default EC2 block. Use unique keys per host and run `ssh-add -K ~/.ssh/<key>` to cache them in the keychain.

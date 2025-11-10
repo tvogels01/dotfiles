@@ -78,6 +78,7 @@ ln -s ~/repos/tvogels01/dotfiles/dot.zlogin           ~/.zlogin
 ln -s ~/repos/tvogels01/dotfiles/dot.zlogout          ~/.zlogout
 ln -s ~/repos/tvogels01/dotfiles/dot.zprofile         ~/.zprofile
 ln -s ~/repos/tvogels01/dotfiles/dot.zshrc            ~/.zshrc
+ln -s ~/repos/tvogels01/dotfiles/ssh_config           ~/.ssh/config
 ```
 
 ### Quick environment activation
@@ -89,6 +90,21 @@ After sourcing `~/.aliases`, an `activate` helper is available. Run it in any pr
 3. Source `.venv/bin/activate` when a local Python virtualenv is available.
 
 Both NVM and Conda hooks are loaded on demand the first time you use `nvm`, `node`, `npm`, or `conda`, keeping shell startup latency low.
+
+### Conda workflow tips
+
+1. Create a named environment (shared default is `code`):
+   ```shell
+   conda create --name <project> python=3.12
+   ```
+2. Inside the project folder run `activate` to enter the matching Conda env automatically.
+3. Capture dependencies:
+   ```shell
+   conda env export --from-history > environment.yml
+   ```
+4. Exit with `conda deactivate` (the helper does not auto-deactivate).
+
+Projects that prefer `python -m venv` can still use `.venv/bin/activate` and skip Conda entirely.
 
 ## Visual Studio Code
 
@@ -158,3 +174,17 @@ Also try: `softwareupdate --list`
 ## macOS tweaks
 
 Run [`set_macos_defaults.sh`](./set_macos_defaults.sh) to apply favorite defaults (Dock position, alert sounds, speech voice). The script runs `defaults write` commands with `set -euo pipefail`, prints each change, restarts the Dock, and reminds you of manual checklist items (FileVault, Bluetooth, etc.). Pass `--help` to see usage.
+
+## SSH configuration
+
+Link [`ssh_config`](./ssh_config) to `~/.ssh/config` (see Installation above). The default entry keeps EC2 instances alive and logs in as `ec2-user`. Add host-specific overrides below that block and keep permissions strict (`chmod 600 ~/.ssh/config`). Pair this with per-host keys in `~/.ssh` and `ssh-add -K ~/.ssh/<key>` as needed.
+
+## Workflow cheatsheet
+
+[`CHEATSHEET.md`](./CHEATSHEET.md) summarizes the most common commands:
+
+- `activate` helper order of operations (`nvm use` → `conda activate <cwd>` → `.venv`)
+- `brew bundle`, `./brew_upgrade_all.sh`, and lockfile tips
+- Conda/Jupyter workflows, VS Code reminders, and SSH config usage
+
+Update the cheat sheet whenever workflows change so onboarding stays accurate.
