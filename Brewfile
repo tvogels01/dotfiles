@@ -50,6 +50,8 @@ brew "container"
 brew "cookiecutter"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
+# Spell checker for code
+brew "cspell"
 # Text processing system for reStructuredText
 brew "docutils"
 # Convert text between DOS, UNIX, and Mac formats

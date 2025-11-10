@@ -14,7 +14,7 @@ More at [cheatsheet.html](https://conda.io/projects/conda/en/latest/user-guide/c
 
 ## `nvm` to manage Node.js versions
 
-Start with the latest (LTS) version of Node.js
+Start with the latest (LTS) version of `Node.js`
 after installing [`nvm`](https://github.com/nvm-sh/nvm)
 using `brew bundle`:
 
@@ -52,6 +52,8 @@ tsc --version
 ```
 
 ## Jupyter Lab VIM
+
+Make sure the matching `conda` environment is active.
 
 ```shell
 conda install jupyterlab
