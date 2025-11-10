@@ -42,7 +42,15 @@ See also [dot.gitconfig\_base](./dot.gitconfig_base).
 
 ### "Installation" of dot files
 
-Until I whip up something fancier, you can run (assuming you organize your clones in `~/repos/owner/name`):
+From the repo root run:
+
+```shell
+./bootstrap.sh
+```
+
+The script detects where it lives, links each `dot.*` file into `$HOME`, and backs up any conflicting files into `~/.dotfiles_backup/<timestamp>`. If you want to preview the actions, add `--dry-run`.
+
+If you prefer to create links manually, use the commands below (assuming your clone lives under `~/repos/owner/name`):
 
 ```shell
 ln -s ~/repos/tvogels01/dotfiles/dot.aliases          ~/.aliases
@@ -55,7 +63,7 @@ ln -s ~/repos/tvogels01/dotfiles/dot.editorconfig     ~/.editorconfig
 ln -s ~/repos/tvogels01/dotfiles/dot.gitconfig_base   ~/.gitconfig_base
 ln -s ~/repos/tvogels01/dotfiles/dot.gitignore_global ~/.gitignore_global
 ln -s ~/repos/tvogels01/dotfiles/dot.psqlrc           ~/.psqlrc
-ln -s ~/repos/tvogels01/dotfiles/dot.screenrc          ~/.screenrc
+ln -s ~/repos/tvogels01/dotfiles/dot.screenrc         ~/.screenrc
 ln -s ~/repos/tvogels01/dotfiles/dot.vimrc            ~/.vimrc
 ln -s ~/repos/tvogels01/dotfiles/dot.zlogin           ~/.zlogin
 ln -s ~/repos/tvogels01/dotfiles/dot.zlogout          ~/.zlogout

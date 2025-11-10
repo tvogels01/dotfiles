@@ -4,7 +4,7 @@ We are about to give this dotfiles repo some overdue TLC, so this checklist will
 
 | Status | Topic | Notes |
 | --- | --- | --- |
-| [ ] | Automate dotfile bootstrap | Replace manual `ln -s` steps with a safe script or stow/chezmoi setup. |
+| [x] | Automate dotfile bootstrap | Added `bootstrap.sh` with backups + README docs; manual commands kept as fallback. |
 | [ ] | Clean PATH initialization | Deduplicate PATH edits and ensure `$HOME` is expanded consistently across shells. |
 | [ ] | Optimize shell startup | Lazy-load nvm/conda, expand history settings, and revisit prompt tweaks. |
 | [ ] | Restructure Brew bundles | Separate core/optional taps, consider `mas` apps, and document usage patterns. |
