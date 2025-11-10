@@ -154,3 +154,7 @@ conda update --all
 ```
 
 Also try: `softwareupdate --list`
+
+## macOS tweaks
+
+Run [`set_macos_defaults.sh`](./set_macos_defaults.sh) to apply favorite defaults (Dock position, alert sounds, speech voice). The script runs `defaults write` commands with `set -euo pipefail`, prints each change, restarts the Dock, and reminds you of manual checklist items (FileVault, Bluetooth, etc.). Pass `--help` to see usage.
