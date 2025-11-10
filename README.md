@@ -74,6 +74,14 @@ ln -s ~/repos/tvogels01/dotfiles/dot.zprofile         ~/.zprofile
 ln -s ~/repos/tvogels01/dotfiles/dot.zshrc            ~/.zshrc
 ```
 
+### Quick environment activation
+
+After sourcing `~/.aliases`, an `activate` helper is available. Run it in any project directory to:
+
+1. Execute `nvm use` if a `.nvmrc` file is present.
+2. Activate the Conda environment whose name matches the current folder (if it exists).
+3. Source `.venv/bin/activate` when a local Python virtualenv is available.
+
 ## Visual Studio Code
 
 ### Settings

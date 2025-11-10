@@ -12,4 +12,27 @@ alias up='cd ..'
 
 alias od='/Applications/Xcode.app/Contents/Developer/usr/bin/opendiff'
 
+activate() {
+  # 1) Node via nvm
+  if [ -f .nvmrc ] && command -v nvm >/dev/null 2>&1; then
+    nvm use
+  fi
+
+  # 2) Conda env matching directory name
+  if command -v conda >/dev/null 2>&1; then
+    local conda_base cwd_name
+    conda_base="$(conda info --base 2>/dev/null || true)"
+    cwd_name="$(basename "$PWD")"
+    if [ -n "$conda_base" ] && [ -n "$cwd_name" ] && [ -d "$conda_base/envs/$cwd_name" ]; then
+      conda activate "$cwd_name"
+    fi
+  fi
+
+  # 3) Python virtualenv
+  if [ -f .venv/bin/activate ]; then
+    # shellcheck disable=SC1091
+    . .venv/bin/activate
+  fi
+}
+
 export DOTFILES_LOADED_ALIASES=$SHLVL
