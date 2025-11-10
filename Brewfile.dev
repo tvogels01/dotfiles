@@ -1,0 +1,70 @@
+# Usage: brew bundle --file=Brewfile.dev
+# Optional developer stacks: languages, databases, CLIs.
+
+tap "heroku/brew"
+tap "homebrew/bundle"
+tap "homebrew/services"
+tap "mongodb/brew"
+
+# CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
+brew "aws-sam-cli"
+# Integrated shell for working with the AWS CLI
+brew "aws-shell"
+# Checks for bashisms in shell scripts
+brew "checkbashisms"
+# GNU CLISP, a Common Lisp implementation
+brew "clisp"
+# Dynamic, general-purpose programming language
+brew "clojure"
+# Create and run Linux containers using lightweight virtual machines
+brew "container"
+# Utility that creates projects from templates
+brew "cookiecutter"
+# Apjanke's fork of the classic cowsay project
+brew "cowsay"
+# Spell checker for code
+brew "cspell"
+# Text processing system for reStructuredText
+brew "docutils"
+# Functional programming language for building browser-based GUIs
+brew "elm"
+# Infamous electronic fortune-cookie generator
+brew "fortune"
+# Glorious Glasgow Haskell Compilation System
+brew "ghc"
+# Core application library for C
+brew "glib"
+# Prolog compiler with constraint solving
+brew "gnu-prolog"
+# ASCII-art displaying typo-corrector for commands
+brew "gti"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Everything you need to get started with Heroku
+brew "heroku/brew/heroku"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
+# Command-line JSON pretty-printer
+brew "jsonpp"
+# Build tool for Clojure
+brew "leiningen"
+# Web and API based SMTP testing tool
+brew "mailhog", restart_service: :changed
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
+# Development kit for the Java programming language
+brew "openjdk"
+# Development kit for the Java programming language
+brew "openjdk@11"
+# Framework for layout and rendering of i18n text
+brew "pango"
+# Python interface to Tcl/Tk
+brew "python-tk@3.13"
+# Readline wrapper: adds readline support to tools that lack it
+brew "rlwrap"
+# Steel Bank Common Lisp system
+brew "sbcl"
+# Prints a steam locomotive if you type sl instead of ls
+brew "sl"
+# Python-powered, cross-platform, Unix-gazing shell language and command prompt
+brew "xonsh"

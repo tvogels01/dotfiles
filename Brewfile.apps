@@ -1,0 +1,13 @@
+# Usage: brew bundle --file=Brewfile.apps
+# GUI applications and Mac App Store installs.
+
+tap "homebrew/bundle"
+
+# Universal database tool and SQL client
+cask "dbeaver-community"
+
+# App Store helper CLI
+brew "mas"
+
+# App Store apps (comment out any you do not need)
+mas "Xcode", id: 497799835

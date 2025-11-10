@@ -9,11 +9,16 @@ Use at [your own risk](./LICENSE).
 
 ### Add Software on macOS
 
-See [Brewfile](./Brewfile) to install basic software using [`Homebrew`](https://brew.sh).
+See the Brew bundles to install software using [`Homebrew`](https://brew.sh):
 
 ```shell
-brew bundle
+brew bundle                         # Core CLI + runtimes (Brewfile)
+brew bundle --file=Brewfile.dev     # Optional languages, DBs, utilities
+brew bundle --file=Brewfile.apps    # GUI + Mac App Store apps
 ```
+
+`Brewfile.apps` includes [`mas`](https://github.com/mas-cli/mas) entries (e.g., Xcode); remove any you do not want before running the bundle.
+Capture the exact versions you installed with `brew bundle lock --file=<bundle>`.
 
 ### Add Conda
 
@@ -135,7 +140,7 @@ Then merge `Brewfile.new` with the existing `Brewfile`.
 
 ```shell
 brew update
-brew bundle upgrade
+./brew_upgrade_all.sh
 ```
 
 Also check for untracked (and outdated) software:

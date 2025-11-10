@@ -8,7 +8,7 @@ We are about to give this dotfiles repo some overdue TLC, so this checklist will
 | [x] | Clean PATH initialization | Added shared `.dotfiles_path`, sourced from Bash/Zsh with dedup + proper `$HOME` expansion. |
 | [x] | Add `activate` helper | Added shared shell function handling `.nvmrc`, Conda `<cwd>` envs, and `.venv` activations. |
 | [x] | Optimize shell startup | Lazy-load nvm & conda, expanded history settings, and documented the behavior. |
-| [ ] | Restructure Brew bundles | Separate core/optional taps, consider `mas` apps, and document usage patterns. |
+| [x] | Restructure Brew bundles | Split into `Brewfile`, `Brewfile.dev`, `Brewfile.apps` (with `mas`) and documented usage. |
 | [ ] | Harden macOS defaults script | Add strict bash flags, document required privileges, and verify changes. |
 | [ ] | Enrich documentation | Capture workflows (VS Code, Conda, SSH) and keep cheatsheets in sync. |
 
