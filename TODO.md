@@ -5,7 +5,7 @@ We are about to give this dotfiles repo some overdue TLC, so this checklist will
 | Status | Topic | Notes |
 | --- | --- | --- |
 | [x] | Automate dotfile bootstrap | Added `bootstrap.sh` with backups + README docs; manual commands kept as fallback. |
-| [ ] | Clean PATH initialization | Deduplicate PATH edits and ensure `$HOME` is expanded consistently across shells. |
+| [x] | Clean PATH initialization | Added shared `.dotfiles_path`, sourced from Bash/Zsh with dedup + proper `$HOME` expansion. |
 | [ ] | Optimize shell startup | Lazy-load nvm/conda, expand history settings, and revisit prompt tweaks. |
 | [ ] | Restructure Brew bundles | Separate core/optional taps, consider `mas` apps, and document usage patterns. |
 | [ ] | Harden macOS defaults script | Add strict bash flags, document required privileges, and verify changes. |

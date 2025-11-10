@@ -2,8 +2,7 @@
 
 # dotfile target: ~/.bash_profile
 
-# Update brewed path
-PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
+# Shared PATH tweaks live in ~/.dotfiles_path (sourced via ~/.bashrc).
 
 # Completions
 for f in /opt/homebrew/etc/bash_completion.d/*; do

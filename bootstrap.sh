@@ -54,6 +54,7 @@ declare -a LINK_TARGETS=(
   "dot.editorconfig:.editorconfig"
   "dot.gitconfig_base:.gitconfig_base"
   "dot.gitignore_global:.gitignore_global"
+  "dot.dotfiles_path:.dotfiles_path"
   "dot.psqlrc:.psqlrc"
   "dot.screenrc:.screenrc"
   "dot.vimrc:.vimrc"

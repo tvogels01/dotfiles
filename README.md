@@ -50,6 +50,8 @@ From the repo root run:
 
 The script detects where it lives, links each `dot.*` file into `$HOME`, and backs up any conflicting files into `~/.dotfiles_backup/<timestamp>`. If you want to preview the actions, add `--dry-run`.
 
+PATH customizations live in [`dot.dotfiles_path`](./dot.dotfiles_path); edit that file to add or remove directories once it is linked to `~/.dotfiles_path`.
+
 If you prefer to create links manually, use the commands below (assuming your clone lives under `~/repos/owner/name`):
 
 ```shell
@@ -62,6 +64,7 @@ ln -s ~/repos/tvogels01/dotfiles/dot.duckdbrc         ~/.duckdbrc
 ln -s ~/repos/tvogels01/dotfiles/dot.editorconfig     ~/.editorconfig
 ln -s ~/repos/tvogels01/dotfiles/dot.gitconfig_base   ~/.gitconfig_base
 ln -s ~/repos/tvogels01/dotfiles/dot.gitignore_global ~/.gitignore_global
+ln -s ~/repos/tvogels01/dotfiles/dot.dotfiles_path    ~/.dotfiles_path
 ln -s ~/repos/tvogels01/dotfiles/dot.psqlrc           ~/.psqlrc
 ln -s ~/repos/tvogels01/dotfiles/dot.screenrc         ~/.screenrc
 ln -s ~/repos/tvogels01/dotfiles/dot.vimrc            ~/.vimrc

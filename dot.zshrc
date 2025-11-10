@@ -17,14 +17,11 @@ bindkey "^R" history-incremental-search-backward
 
 export GREP_COLOR="auto"
 
-# See Brewfile for specific versions
-typeset -U path
-export PATH="/opt/homebrew/bin:/opt/homebrew/sbin${PATH+:$PATH}"
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
-
-# See https://console-ninja.com
-export PATH="~/.console-ninja/.bin:$PATH"
+# PATH customizations (shared with other shells)
+if [ -r ~/.dotfiles_path ]; then
+  source ~/.dotfiles_path
+fi
+typeset -U path PATH
 
 # Smarter "cd"
 setopt auto_cd

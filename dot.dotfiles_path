@@ -1,0 +1,39 @@
+# dotfile target: ~/.dotfiles_path
+#
+# Centralized PATH configuration shared between Bash and Zsh.
+
+_dotfiles_path_prepend() {
+  local dir="$1"
+  case "$dir" in
+    "~") dir="$HOME" ;;
+    "~/"*) dir="$HOME/${dir#~/}" ;;
+  esac
+
+  [ -d "$dir" ] || return
+
+  case ":${PATH:-}:" in
+    *":$dir:"*) return ;;
+  esac
+
+  if [ -n "${PATH:-}" ]; then
+    PATH="$dir:$PATH"
+  else
+    PATH="$dir"
+  fi
+}
+
+while IFS= read -r _dotfiles_path_entry; do
+  [ -z "$_dotfiles_path_entry" ] && continue
+  _dotfiles_path_prepend "$_dotfiles_path_entry"
+done <<'EOF'
+/opt/homebrew/bin
+/opt/homebrew/sbin
+/opt/homebrew/opt/openjdk@17/bin
+/opt/homebrew/opt/postgresql@17/bin
+~/.console-ninja/.bin
+EOF
+
+export PATH
+
+unset -f _dotfiles_path_prepend
+unset _dotfiles_path_entry
