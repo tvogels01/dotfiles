@@ -66,5 +66,7 @@ brew "rlwrap"
 brew "sbcl"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
+# Terminal multiplexer
+brew "tmux"
 # Python-powered, cross-platform, Unix-gazing shell language and command prompt
 brew "xonsh"
