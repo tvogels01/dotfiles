@@ -15,8 +15,8 @@ alias od='/Applications/Xcode.app/Contents/Developer/usr/bin/opendiff'
 # --- Lazy loaders -----------------------------------------------------------
 
 # Delay NVM loading until node tooling is actually used.
-if [ -z "${NVM_DIR:-}" ] && [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && ! command -v nvm >/dev/null 2>&1; then
-  export NVM_DIR="$HOME/.nvm"
+if [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && ! command -v nvm >/dev/null 2>&1; then
+  export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
   _DOTFILES_NVM_SCRIPT="/opt/homebrew/opt/nvm/nvm.sh"
   _dotfiles_load_nvm() {
     unset -f nvm node npm >/dev/null 2>&1 || true
