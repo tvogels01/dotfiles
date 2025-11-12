@@ -36,6 +36,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Teach git completion about custom aliases.
+if ! (( $+functions[_git-b] )); then
+  _git-b() {
+    _git-branch "$@"
+  }
+fi
+
 # Aliases shared across shells
 if [ -r ~/.aliases ]; then
   source ~/.aliases
