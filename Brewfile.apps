@@ -10,4 +10,4 @@ cask "dbeaver-community"
 brew "mas"
 
 # App Store apps (comment out any you do not need)
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
