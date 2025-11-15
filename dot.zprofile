@@ -2,6 +2,10 @@
 
 # dotfile target: ~/.zprofile
 
+# If you are wondering why these settings might be missing, you might have
+# accidentally started a non-login shell, e.g. with `exec zsh`.
+# Next time, try `exec zsh --login` instead.
+
 # BEGIN eval "$(/opt/homebrew/bin/brew shellenv)"
 export HOMEBREW_PREFIX="/opt/homebrew";
 export HOMEBREW_CELLAR="/opt/homebrew/Cellar";
