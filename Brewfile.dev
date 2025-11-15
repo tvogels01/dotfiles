@@ -48,8 +48,8 @@ brew "iperf3"
 brew "jsonpp"
 # Build tool for Clojure
 brew "leiningen"
-# Web and API based SMTP testing tool
-brew "mailhog", restart_service: :changed
+# Web and API based SMTP testing
+brew "mailpit"
 # High-performance, schema-free, document-oriented database
 brew "mongodb/brew/mongodb-community"
 # Development kit for the Java programming language
