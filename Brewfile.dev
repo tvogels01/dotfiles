@@ -58,6 +58,8 @@ brew "openjdk"
 brew "openjdk@11"
 # Framework for layout and rendering of i18n text
 brew "pango"
+# Python version management
+brew "pyenv"
 # Python interface to Tcl/Tk
 brew "python-tk@3.13"
 # Readline wrapper: adds readline support to tools that lack it
