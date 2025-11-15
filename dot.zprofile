@@ -16,4 +16,10 @@ eval "$(/usr/bin/env PATH_HELPER_ROOT="/opt/homebrew" /usr/libexec/path_helper -
 export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 # END eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# BEGIN pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - -zsh)"
+# END pyenv
+
 export DOTFILES_LOADED_ZPROFILE=$SHLVL
