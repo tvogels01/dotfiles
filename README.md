@@ -94,14 +94,18 @@ Both NVM and Conda hooks are loaded on demand the first time you use `nvm`, `nod
 ### Conda workflow tips
 
 1. Create a named environment (shared default is `code`):
+
    ```shell
    conda create --name <project> python=3.12
    ```
+
 2. Inside the project folder run `activate` to enter the matching Conda env automatically.
 3. Capture dependencies:
+
    ```shell
    conda env export --from-history > environment.yml
    ```
+
 4. Exit with `conda deactivate` (the helper does not auto-deactivate).
 
 Projects that prefer `python -m venv` can still use `.venv/bin/activate` and skip Conda entirely.

@@ -1,5 +1,5 @@
 # dotfile target: ~/.ssh/ssh_config
-#
+
 Host ec2-*.amazonaws.com
   ServerAliveInterval 60
   User ec2-user
