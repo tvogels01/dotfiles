@@ -58,5 +58,7 @@ brew "readline"
 brew "shellcheck"
 # Internet file retriever
 brew "wget"
+# Linter for YAML files
+brew "yamllint"
 # Zstandard is a real-time compression algorithm
 brew "zstd"
