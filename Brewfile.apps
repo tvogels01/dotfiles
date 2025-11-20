@@ -1,8 +1,6 @@
 # Usage: brew bundle --file=Brewfile.apps
 # GUI applications and Mac App Store installs.
 
-tap "homebrew/bundle"
-
 # Universal database tool and SQL client
 cask "dbeaver-community"
 

@@ -12,9 +12,6 @@
 #
 # Each file is alphabetically sorted to keep diffs small.
 
-tap "homebrew/bundle"
-tap "homebrew/services"
-
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # Minimal installer for conda
