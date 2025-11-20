@@ -2,8 +2,6 @@
 # Optional developer stacks: languages, databases, CLIs.
 
 tap "heroku/brew"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "mongodb/brew"
 
 # CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
