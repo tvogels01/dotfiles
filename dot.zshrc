@@ -48,13 +48,11 @@ if [ -r ~/.aliases ]; then
   source ~/.aliases
 fi
 
-# Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 setopt append_history
-setopt share_history
-# End of lines configured by zsh-newuser-install
+unsetopt share_history
 setopt hist_ignore_all_dups
 setopt hist_ignore_dups
 setopt hist_ignore_space
