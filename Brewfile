@@ -12,6 +12,8 @@
 #
 # Each file is alphabetically sorted to keep diffs small.
 
+# Terminal-based AI coding assistant
+cask "claude-code"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # Minimal installer for conda
