@@ -2,8 +2,9 @@
 
 # dotfile target: ~/.zlogin
 
-echo "--"
-if [[ -r ~/repos/tvogels01/quotes/quotes ]]; then
+if [[ "$(tty)" == "not a tty" ]]; then
+  echo "            DIAL TONE DETECTED... CARRIER ESTABLISHED"
+elif [[ -r ~/repos/tvogels01/quotes/quotes ]]; then
   fortune ~/repos/tvogels01/quotes/quotes
 else
   fortune
