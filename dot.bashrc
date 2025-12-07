@@ -22,6 +22,10 @@ if [ -r ~/.dotfiles_path ]; then
   source ~/.dotfiles_path
 fi
 
+# Load NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && source "/opt/homebrew/opt/nvm/nvm.sh"
+
 if [ type __git_ps1 > /dev/null 2>&1 ]; then
   export PS1='\w$(__git_ps1 " (%s)") \$ '
 else

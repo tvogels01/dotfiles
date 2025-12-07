@@ -14,10 +14,5 @@ if [ -r ~/.aliases ]; then
   source ~/.aliases
 fi
 
-# E.g. for HOMEBREW_GITHUB_API_TOKEN
-if [ -r ~/.private/keys ]; then
-  source ~/.private/keys
-fi
-
 # Basic Bash
 source ~/.bashrc
