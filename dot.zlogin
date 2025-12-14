@@ -3,14 +3,15 @@
 # dotfile target: ~/.zlogin
 
 if [[ "$(tty)" == "not a tty" ]]; then
-  echo "            DIAL TONE DETECTED... CARRIER ESTABLISHED"
+  true 
 elif [[ -r ~/repos/tvogels01/quotes/quotes ]]; then
   echo "--"
   fortune ~/repos/tvogels01/quotes/quotes
+  echo "--"
 else
   echo "--"
   fortune
+  echo "--"
 fi
-echo "--"
 
 export DOTFILES_LOADED_ZLOGIN=$SHLVL
