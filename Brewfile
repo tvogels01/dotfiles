@@ -55,6 +55,8 @@ brew "postgresql@17"
 brew "readline"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# High-performance data structure server that primarily serves key/value workloads
+brew "valkey"
 # Internet file retriever
 brew "wget"
 # Linter for YAML files
