@@ -34,7 +34,7 @@ command -v brew >/dev/null 2>&1 || {
 
 for bundle in Brewfile Brewfile.dev Brewfile.apps; do
   if [[ -f "$bundle" ]]; then
-    echo "==> Upgrading $bundle"
+    echo "==> Upgrading using $bundle"
     brew bundle upgrade --file="$bundle"
   else
     echo "==> Skipping $bundle (file not found)"
