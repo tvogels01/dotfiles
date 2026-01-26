@@ -12,6 +12,8 @@ brew "aws-shell"
 brew "checkbashisms"
 # GNU CLISP, a Common Lisp implementation
 brew "clisp"
+# Statistics utility to count lines of code
+brew "cloc"
 # Dynamic, general-purpose programming language
 brew "clojure"
 # Create and run Linux containers using lightweight virtual machines
