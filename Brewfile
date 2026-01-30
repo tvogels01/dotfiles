@@ -33,6 +33,8 @@ brew "black"
 brew "dos2unix"
 # Embeddable SQL OLAP Database Management System
 brew "duckdb"
+# In-band and out-of-band IPMI (v1.5/2.0) software
+brew "freeipmi"
 # GitHub command-line tool
 brew "gh"
 # Distributed revision control system
@@ -53,6 +55,8 @@ brew "openjdk@17"
 brew "postgresql@17"
 # Library for command-line editing
 brew "readline"
+# Extremely fast Python linter, written in Rust
+brew "ruff"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
 # High-performance data structure server that primarily serves key/value workloads
