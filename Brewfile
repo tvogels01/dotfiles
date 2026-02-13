@@ -12,58 +12,67 @@
 #
 # Each file is alphabetically sorted to keep diffs small.
 
-# Terminal-based AI coding assistant
-cask "claude-code"
-# OpenAI's coding agent that runs in your terminal
-cask "codex"
-# Minimal installer for conda
-cask "miniconda"
-# Rust-based terminal
-cask "warp"
-
-# Official Amazon AWS command-line interface
-brew "awscli"
+# Integrated shell for working with the AWS CLI
+brew "aws-shell"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Python code formatter
-brew "black"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# Statistics utility to count lines of code
+brew "cloc"
+# Create and run Linux containers using lightweight virtual machines
+brew "container"
+# Apjanke's fork of the classic cowsay project
+brew "cowsay"
+# Spell checker for code
+brew "cspell"
+# Text processing system for reStructuredText
+brew "docutils"
 # Convert text between DOS, UNIX, and Mac formats
 brew "dos2unix"
 # Embeddable SQL OLAP Database Management System
 brew "duckdb"
+# Infamous electronic fortune-cookie generator
+brew "fortune"
 # In-band and out-of-band IPMI (v1.5/2.0) software
 brew "freeipmi"
-# GitHub command-line tool
-brew "gh"
 # Distributed revision control system
 brew "git"
-# GNU Pretty Good Privacy (PGP) package
+# Core application library for C
+brew "glib"
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # Improved top (interactive process viewer)
 brew "htop"
+# Update of iperf: measures TCP, UDP, and SCTP bandwidth
+brew "iperf3"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Sudoless performance monitoring for Apple Silicon processors
+brew "macmon"
 # CLI for Node.js style checker and lint tool for Markdown files
 brew "markdownlint-cli"
-# Manage multiple Node.js versions
-brew "nvm"
-# Development kit for the Java programming language
-brew "openjdk@17"
-# Object-relational database system
-brew "postgresql@17"
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community"
 # Library for command-line editing
 brew "readline"
-# Extremely fast Python linter, written in Rust
-brew "ruff"
-# Static analysis and lint tool, for (ba)sh scripts
-brew "shellcheck"
+# Readline wrapper: adds readline support to tools that lack it
+brew "rlwrap"
+# Development kit for the Java programming language
+brew "openjdk"
+# Object-relational database system
+brew "postgresql@17", restart_service: :changed
+# Python interface to Tcl/Tk
+brew "python-tk@3.13"
+# Terminal multiplexer
+brew "tmux"
 # High-performance data structure server that primarily serves key/value workloads
-brew "valkey"
+brew "valkey", restart_service: :changed
 # Internet file retriever
 brew "wget"
-# Linter for YAML files
-brew "yamllint"
+# Python-powered, cross-platform, Unix-gazing shell language and command prompt
+brew "xonsh"
 # Zstandard is a real-time compression algorithm
 brew "zstd"

@@ -3,6 +3,8 @@
 
 # Universal database tool and SQL client
 cask "dbeaver-community"
+# Rust-based terminal
+cask "warp"
 
 # App Store helper CLI
 brew "mas"
