@@ -37,4 +37,5 @@
 [remote "origin"]
 	prune = true
 [user]
-	signingkey = ~/.ssh/github_rsa.pub
+	# Link to the actual key.
+	signingkey = ~/.ssh/github.pub
