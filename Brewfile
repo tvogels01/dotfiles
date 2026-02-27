@@ -66,6 +66,8 @@ brew "openjdk"
 brew "postgresql@17", restart_service: :changed
 # Python interface to Tcl/Tk
 brew "python-tk@3.13"
+# # High-performance, platform-neutral implementation of VNC
+# brew "tiger-vnc"
 # Terminal multiplexer
 brew "tmux"
 # High-performance data structure server that primarily serves key/value workloads
