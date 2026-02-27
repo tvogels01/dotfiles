@@ -26,6 +26,8 @@ brew "gh"
 brew "ghc"
 # Prolog compiler with constraint solving
 brew "gnu-prolog"
+# ASCII-art displaying typo-corrector for commands
+brew "gti"
 # Command-line JSON pretty-printer
 brew "jsonpp"
 # Build tool for Clojure
