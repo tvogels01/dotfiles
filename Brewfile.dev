@@ -52,6 +52,8 @@ brew "sentry-cli"
 brew "shellcheck"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
+# TOML toolkit written in Rust
+brew "taplo"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Python-powered, cross-platform, Unix-gazing shell language and command prompt
