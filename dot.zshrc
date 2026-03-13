@@ -81,6 +81,13 @@ else
 fi
 # End of vcsinfo
 
+# Load environment variables
+if [ -r ~/.private/keys ]; then
+  set -o allexport
+  source ~/.private/keys
+  set +o allexport
+fi
+
 # Zsh Line Editor (zshzle)
 ZLE_RPROMPT_INDENT=1
 
