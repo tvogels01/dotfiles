@@ -3,9 +3,14 @@
 alias la='ls -AG'
 alias ll='ls -alF'
 
-alias cp='cp -i'
-alias mv='mv -i'
-alias rm='rm -i'
+if [[ "$CLAUDECODE" = "1" ]]; then
+  # Claude Code Bash tool can't answer interactive prompts — skip -i aliases
+  true
+else
+  alias cp='cp -i'
+  alias mv='mv -i'
+  alias rm='rm -i'
+fi
 
 alias h='history'
 alias up='cd ..'
