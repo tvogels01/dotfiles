@@ -22,8 +22,6 @@ brew "bat"
 brew "btop"
 # Statistics utility to count lines of code
 brew "cloc"
-# Create and run Linux containers using lightweight virtual machines
-brew "container"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
 # Spell checker for code
