@@ -44,12 +44,16 @@ brew "openjdk@17"
 brew "pango"
 # Extremely fast Python linter, written in Rust
 brew "ruff"
+# Single-binary Markdown linter + formatter (replaces prettier + markdownlint-cli)
+brew "rumdl"
 # Steel Bank Common Lisp system
 brew "sbcl"
 # Command-line utility to interact with Sentry
 brew "sentry-cli"
 # Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Shell script formatter (required by pre-commit shfmt hook)
+brew "shfmt"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # TOML toolkit written in Rust
