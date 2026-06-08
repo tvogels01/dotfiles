@@ -68,7 +68,7 @@ brew "yamllint"
 brew "heroku/brew/heroku"
 
 # Terminal-based AI coding assistant
-cask "claude-code"
+cask "claude-code@latest"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # Minimal installer for conda
