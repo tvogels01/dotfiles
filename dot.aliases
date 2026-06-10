@@ -20,47 +20,57 @@ alias od='/Applications/Xcode.app/Contents/Developer/usr/bin/opendiff'
 # --- Lazy loaders -----------------------------------------------------------
 
 # Delay NVM loading until node tooling is actually used.
+#
+# The helper name has no leading underscore and the nvm.sh path is inlined (not
+# held in a var) on purpose: Claude Code replays a snapshot of this shell that
+# strips _-prefixed functions and non-exported vars. The node/npm/nvm stubs
+# survive that snapshot, so their helper and its paths must too, or the stubs
+# call a missing helper and recurse into themselves.
 if [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && ! command -v nvm >/dev/null 2>&1; then
   export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
-  _DOTFILES_NVM_SCRIPT="/opt/homebrew/opt/nvm/nvm.sh"
-  _dotfiles_load_nvm() {
-    unset -f nvm node npm >/dev/null 2>&1 || true
-    # shellcheck disable=SC1090
-    . "$_DOTFILES_NVM_SCRIPT"
+  dotfiles_load_nvm() {
+    unset -f nvm node npm dotfiles_load_nvm >/dev/null 2>&1 || true
+    export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+    # shellcheck disable=SC1091
+    . "/opt/homebrew/opt/nvm/nvm.sh"
   }
   nvm() {
-    _dotfiles_load_nvm
+    dotfiles_load_nvm
     nvm "$@"
   }
   node() {
-    _dotfiles_load_nvm
+    dotfiles_load_nvm
     node "$@"
   }
   npm() {
-    _dotfiles_load_nvm
+    dotfiles_load_nvm
     npm "$@"
   }
 fi
 
 # Delay Conda shell hook until it is actually needed.
-_DOTFILES_CONDA_EXE="/opt/homebrew/Caskroom/miniconda/base/bin/conda"
-if [ -x "$_DOTFILES_CONDA_EXE" ] && ! typeset -f conda >/dev/null 2>&1; then
-  _dotfiles_load_conda() {
+#
+# Same snapshot constraint as the nvm block above: the `conda` alias survives
+# Claude Code's shell snapshot but _-prefixed helpers and the conda path var do
+# not, so the helpers use public names and inline the conda path.
+if [ -x "/opt/homebrew/Caskroom/miniconda/base/bin/conda" ] && ! typeset -f conda >/dev/null 2>&1; then
+  dotfiles_load_conda() {
     unalias conda 2>/dev/null || true
+    unset -f dotfiles_load_conda dotfiles_conda_proxy >/dev/null 2>&1 || true
     local shell_name="zsh"
     if [ -n "${BASH_VERSION:-}" ]; then
       shell_name="bash"
     fi
     local __conda_setup
-    __conda_setup="$("$_DOTFILES_CONDA_EXE" "shell.$shell_name" 'hook' 2> /dev/null)" || return
+    __conda_setup="$("/opt/homebrew/Caskroom/miniconda/base/bin/conda" "shell.$shell_name" 'hook' 2> /dev/null)" || return
     eval "$__conda_setup"
     unset __conda_setup
   }
-  _dotfiles_conda_proxy() {
-    _dotfiles_load_conda
+  dotfiles_conda_proxy() {
+    dotfiles_load_conda
     conda "$@"
   }
-  alias conda='_dotfiles_conda_proxy'
+  alias conda='dotfiles_conda_proxy'
 fi
 
 # --- Helpers ----------------------------------------------------------------
