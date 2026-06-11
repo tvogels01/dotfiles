@@ -52,8 +52,6 @@ brew "jq"
 brew "macmon"
 # CLI for Node.js style checker and lint tool for Markdown files
 brew "markdownlint-cli"
-# High-performance, schema-free, document-oriented database
-brew "mongodb/brew/mongodb-community"
 # Library for command-line editing
 brew "readline"
 # Readline wrapper: adds readline support to tools that lack it

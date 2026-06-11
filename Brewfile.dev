@@ -1,8 +1,11 @@
 # Usage: brew bundle --file=Brewfile.dev
 # Optional developer stacks: languages, databases, CLIs.
 
-tap "heroku/brew"
-tap "mongodb/brew"
+# tap "heroku/brew"
+
+# tap "mongodb/brew"
+#-- # High-performance, schema-free, document-oriented database
+#-- brew "mongodb/brew/mongodb-community"
 
 # CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
 brew "aws-sam-cli"
