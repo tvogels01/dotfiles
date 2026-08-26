@@ -19,7 +19,7 @@ highlight BadWhitespace ctermbg=red guibg=red
 " http://wiki.python.org/moin/Vim
 " http://svn.python.org/projects/python/trunk/Misc/Vim/vimrc
 let python_highlight_all=1
-autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 colorcolumn=100
+autocmd FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4 colorcolumn=88
 " SQL
 autocmd FileType sql setlocal syntax:plsql tabstop=8 expandtab shiftwidth=3 softtabstop=3
 " Shell
