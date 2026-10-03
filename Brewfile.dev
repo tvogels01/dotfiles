@@ -76,3 +76,5 @@ cask "claude-code@latest"
 cask "codex"
 # Minimal installer for conda
 cask "miniconda"
+# Multiplayer code editor
+cask "zed"
