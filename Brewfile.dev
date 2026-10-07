@@ -33,6 +33,8 @@ brew "ghc"
 brew "gnu-prolog"
 # ASCII-art displaying typo-corrector for commands
 brew "gti"
+# Agent multiplexer that lives in your terminal
+brew "herdr"
 # Command-line JSON pretty-printer
 brew "jsonpp"
 # Build tool for Clojure
